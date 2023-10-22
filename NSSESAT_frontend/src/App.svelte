@@ -18,7 +18,43 @@
 		}]
 	};
 
-	let options = {};
+	let imageBase64 = "";
+
+	async function sendPointData(point) {
+		try {
+			const response = await fetch("http://127.0.0.1:8000/set_point", {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({ clicked_point: point })
+			});
+			if (response.ok) {
+				const data = await response.json();
+				console.log(data.message);
+				imageBase64 = data.image;  // 画像データを取得
+			} else {
+				console.error(`API Error: ${response.statusText}`);
+			}
+		} catch (error) {
+			console.error(`Fetch Error: ${error}`);
+		}
+	}
+
+	// 既存のoptionsオブジェクト
+	let options = {
+		onClick: function(event, elements) {
+			if (elements.length > 0) {
+				const chartElement = elements[0];
+				const dataIndex = chartElement.index;
+				const datasetIndex = chartElement.datasetIndex;
+				const clickedData = chartData.datasets[datasetIndex].data[dataIndex];
+				const pointString = `${clickedData.x}-${clickedData.y}`;
+				console.log("Clicked Point:", pointString);
+				sendPointData(pointString);  // ここでデータを送信
+			}
+		}
+	};
 
 	async function fetchData() {
 		try {
@@ -42,4 +78,9 @@
 	<Scatter data={chartData} {options} />
 {:else}
 	<p>データがありません。</p>
+{/if}
+
+{#if imageBase64}
+  <img src={`data:image/png;base64,${imageBase64}`} alt="Visual representation of a tree structure" />
+{:else}
 {/if}

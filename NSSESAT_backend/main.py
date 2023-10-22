@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import json
+from pydantic import BaseModel
+from treeimagename import generate_tree_image
+import base64
 
 app = FastAPI()
 
@@ -12,6 +14,24 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+class PointData(BaseModel):
+    clicked_point: str
+
+@app.post("/set_point")
+async def set_point(point_data: PointData):
+    imagefilename = point_data.clicked_point
+    print("Received imagefilename:", imagefilename)
+    try:
+        generate_tree_image(imagefilename)  # imagefilenameを渡す
+        with open(f"output.png", "rb") as img_file:  # 出力ファイル名も変更
+            img_base64 = base64.b64encode(img_file.read()).decode("utf-8")
+        return {"message": "Data received", "image": img_base64}
+    except Exception as e:
+        print(f"An error occurred while generating the tree image: {e}")
+        return {"message": f"An error occurred: {e}"}
+
 
 @app.get("/get_data")
 async def get_data():
