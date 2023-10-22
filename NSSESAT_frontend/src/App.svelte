@@ -19,7 +19,7 @@
 	};
 
 	let imageBase64 = "";
-
+	
 	async function sendPointData(point) {
 		try {
 			const response = await fetch("http://127.0.0.1:8000/set_point", {
@@ -74,11 +74,23 @@
 	onMount(fetchData);
 </script>
 
-{#if dataFromAPI.plotdata.length > 0}
-	<Scatter data={chartData} {options} />
-{:else}
-	<p>データがありません。</p>
-{/if}
+<style>
+	img {
+		max-width: 40%;
+		height: auto;
+		margin: 0;  /* 画像のマージンを0に設定 */
+	}
+</style>
+
+  
+<div class="chart-container">
+	{#if dataFromAPI.plotdata.length > 0}
+		<Scatter data={chartData} {options} />
+	{:else}
+		<p>データがありません。</p>
+	{/if}
+</div>
+
 
 {#if imageBase64}
   <img src={`data:image/png;base64,${imageBase64}`} alt="Visual representation of a tree structure" />
