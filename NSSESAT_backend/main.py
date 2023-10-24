@@ -54,14 +54,21 @@ async def compile_and_run_cpp(request: Request):
 async def set_point(point_data: PointData):
     imagefilename = point_data.clicked_point
     print("Received imagefilename:", imagefilename)
+
+    # 数値1と数値2を取得
+    value1, value2 = map(float, imagefilename.split('-'))
+    value1 = value1 * 100
+    value1 = round(value1, 3)
+
     try:
         generate_tree_image(imagefilename)  # imagefilenameを渡す
         with open(f"output.png", "rb") as img_file:  # 出力ファイル名も変更
             img_base64 = base64.b64encode(img_file.read()).decode("utf-8")
-        return {"message": "Data received", "image": img_base64}
+        return {"message": "Data received", "image": img_base64, "誤り率": value1, "ノード数": value2}
     except Exception as e:
         print(f"An error occurred while generating the tree image: {e}")
         return {"message": f"An error occurred: {e}"}
+
 
 
 @app.get("/get_data")

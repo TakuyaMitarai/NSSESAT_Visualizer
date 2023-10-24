@@ -1,6 +1,6 @@
-<input type="text" bind:value={genValue} placeholder="世代交代数">
-<button on:click={compileAndRunCpp}>NSSESAT実行</button>
-
+<div class="banner">
+    NSSESAT
+</div>
 
 <script>
 	import { Scatter } from 'svelte-chartjs';
@@ -24,29 +24,35 @@
 
 	let imageBase64 = "";
 	let genValue = ''; // テキストボックスの値を保存する変数
+	let errorRate = 0;
+	let nodeCount = 0;
+	let isSearching = false;
 
-	async function compileAndRunCpp() {
-		try {
-			const response = await fetch("http://127.0.0.1:8000/compile_and_run_cpp", {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify({gen: genValue}) // gen値をサーバーに送信
-			});
-			if (response.ok) {
-				const data = await response.json();
-				console.log(data.message, data.output);
-				if (data.fetchRequired) {
-					fetchData();
-				}
-			} else {
-				console.error(`API Error: ${response.statusText}`);
-			}
-		} catch (error) {
-			console.error(`Fetch Error: ${error}`);
-		}
-	}
+    async function compileAndRunCpp() {
+        isSearching = true;  // 探索を開始
+        try {
+            const response = await fetch("http://127.0.0.1:8000/compile_and_run_cpp", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({gen: genValue}) // gen値をサーバーに送信
+            });
+            if (response.ok) {
+                const data = await response.json();
+                console.log(data.message, data.output);
+                if (data.fetchRequired) {
+                    fetchData();
+                }
+            } else {
+                console.error(`API Error: ${response.statusText}`);
+            }
+        } catch (error) {
+            console.error(`Fetch Error: ${error}`);
+        } finally {
+            isSearching = false;  // 探索を終了
+        }
+    }
 
 	
 	async function sendPointData(point) {
@@ -62,6 +68,8 @@
 				const data = await response.json();
 				console.log(data.message);
 				imageBase64 = data.image;  // 画像データを取得
+				errorRate = data["誤り率"];  // 誤り率を取得
+				nodeCount = data["ノード数"];  // ノード数を取得
 			} else {
 				console.error(`API Error: ${response.statusText}`);
 			}
@@ -69,6 +77,7 @@
 			console.error(`Fetch Error: ${error}`);
 		}
 	}
+
 
 	// 既存のoptionsオブジェクト
 	let options = {
@@ -104,6 +113,69 @@
 </script>
 
 <style>
+	:global(body) {
+		padding: 0px;
+	}
+
+	.searching-text {
+        font-size: 24px;
+        font-weight: bold; 
+        text-align: center; 
+        position: fixed; 
+	
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+	.table1 {
+		font-size: 36px; /* テキストのサイズ */
+	}
+
+	.input-container {
+		display: flex;
+		justify-content: center; /* 水平方向の中央揃え */
+		align-items: center; /* 垂直方向の中央揃え */
+		margin-top: 20px; /* 上との隙間を20pxに設定 */
+	}
+
+	.input-container input, .input-container button {
+		font-size: 1.5em;          /* フォントサイズを大きくする */
+		padding: 10px 20px;       /* パディングを追加して要素のサイズを大きくする */
+		margin: 10px;              /* 要素間の隙間 */
+	}
+
+	.input-container input {
+		width: 250px;             /* テキストボックスの幅を設定 */
+		border: 1px solid #ccc;  /* テキストボックスの枠線 */
+		border-radius: 5px;      /* 角を少し丸くする */
+	}
+
+	.input-container button {
+		background-color: #007BFF;/* ボタンの背景色 */
+		color: white;             /* ボタンのテキストカラー */
+		border: none;             /* ボタンの枠線を削除 */
+		border-radius: 5px;      /* 角を少し丸くする */
+		cursor: pointer;         /* ホバー時のカーソルを指アイコンにする */
+	}
+
+	.input-container button:hover {
+		background-color: #0056b3;/* ホバー時のボタンの背景色 */
+	}
+
+
+	.banner {
+		background-color: rgba(32, 178, 170, 0.7); /* 透明度を0.5に設定 */
+		height: 60px; /* バナーの高さ */
+		width: 100%; /* バナーの幅 */
+		display: flex;
+		justify-content: center; /* コンテンツを中央に配置 */
+		align-items: center; /* コンテンツを垂直に中央に配置 */
+		font-size: 36px; /* テキストのサイズ */
+		color: white; /* テキストの色 */
+	}
+
+
 	.img_container {
 		width: 50%;
 		height: 100%;
@@ -126,12 +198,41 @@
 		align-items: center;
 		height: calc(100vh - 70px);
 	}
+	th, td {
+		text-align: center;
+	}
+	table {
+    border-collapse: collapse;  /* これにより、隣接するセルの枠線が重なる */
+	}
+
+	th, td {
+		border: 1px solid black;  /* 枠線を追加 */
+		text-align: center;       /* テキストを中央揃えにする */
+		padding: 8px;             /* セル内のテキストと枠線の間にスペースを追加 */
+	}
+
 </style>
 
 
 <div class="flex-container">
   
 <div class="chart-container" style="display:block;width: 50% !important; margin: 0;">
+	<div class="input-container">
+		<input type="text" bind:value={genValue} placeholder="世代交代数">
+		<button on:click={compileAndRunCpp}> 探索 </button>
+	</div>
+	<div class="table1" style="display: flex; justify-content: center;">
+		<table>
+			<tr>
+				<th>　誤り率　</th>
+				<th>　ノード数　</th>
+			</tr>
+			<tr>
+				<td>{errorRate} %</td>
+				<td>{nodeCount}</td>
+			</tr>
+		</table>
+	</div>
 	{#if dataFromAPI.plotdata.length > 0}
 		<Scatter data={chartData} {options} />
 	{:else}
@@ -145,6 +246,16 @@
 	  <img src={`data:image/png;base64,${imageBase64}`} alt="Visual representation of a tree structure" />
   </div>
 {:else}
+{/if}
+
+{#if isSearching}
+    <div class="searching-text">探索中...</div>
+    <style>
+        body {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+    </style>
 {/if}
 
 </div>
