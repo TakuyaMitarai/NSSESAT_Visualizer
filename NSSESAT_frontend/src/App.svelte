@@ -104,15 +104,34 @@
 </script>
 
 <style>
+	.img_container {
+		width: 50%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
 	img {
-		max-width: 40%;
-		height: auto;
+		display: block;
+		max-width: 100%;
+		width: auto;
+		max-height: 100%;
 		margin: 0;  /* 画像のマージンを0に設定 */
+	}
+
+	.flex-container {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: calc(100vh - 70px);
 	}
 </style>
 
+
+<div class="flex-container">
   
-<div class="chart-container">
+<div class="chart-container" style="display:block;width: 50% !important; margin: 0;">
 	{#if dataFromAPI.plotdata.length > 0}
 		<Scatter data={chartData} {options} />
 	{:else}
@@ -122,6 +141,10 @@
 
 
 {#if imageBase64}
-  <img src={`data:image/png;base64,${imageBase64}`} alt="Visual representation of a tree structure" />
+  <div class="img_container">
+	  <img src={`data:image/png;base64,${imageBase64}`} alt="Visual representation of a tree structure" />
+  </div>
 {:else}
 {/if}
+
+</div>
