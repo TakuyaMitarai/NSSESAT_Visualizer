@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from treeimagename import generate_tree_image
+import subprocess
 import base64
 
 app = FastAPI()
@@ -18,6 +19,19 @@ app.add_middleware(
 
 class PointData(BaseModel):
     clicked_point: str
+@app.post("/compile_and_run_cpp")
+async def compile_and_run_cpp():
+    try:
+        # C++のコンパイル
+        subprocess.run(["g++-13", "*.cpp"])
+        
+        # コンパイル後の実行
+        result = subprocess.run(["./a.out"], capture_output=True, text=True)
+        
+        return {"message": "Successfully compiled and executed", "output": result.stdout}
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return {"message": f"An error occurred: {e}"}
 
 @app.post("/set_point")
 async def set_point(point_data: PointData):

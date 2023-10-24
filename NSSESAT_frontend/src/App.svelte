@@ -1,3 +1,5 @@
+<button on:click={compileAndRunCpp}>実行</button>
+
 <script>
 	import { Scatter } from 'svelte-chartjs';
 	import { Chart, LinearScale } from 'chart.js';
@@ -19,6 +21,22 @@
 	};
 
 	let imageBase64 = "";
+
+	async function compileAndRunCpp() {
+        try {
+            const response = await fetch("http://127.0.0.1:8000/compile_and_run_cpp", {
+                method: 'POST'
+            });
+            if (response.ok) {
+                const data = await response.json();
+                console.log(data.message, data.output);
+            } else {
+                console.error(`API Error: ${response.statusText}`);
+            }
+        } catch (error) {
+            console.error(`Fetch Error: ${error}`);
+        }
+    }
 	
 	async function sendPointData(point) {
 		try {
