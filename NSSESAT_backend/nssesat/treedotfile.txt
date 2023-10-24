@@ -2,52 +2,50 @@
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="3"];
+
+	1 [label="2"];
+	8 [label="2"];
+
+	0 -> 1 [label="< 2.2"];
+	0 -> 8 [label="..."];
+
+	2 [label="class=0"];
+	3 [label="0"];
+	9 [label="0"];
+	14 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	8 -> 9 [label="< 3"];
+	8 -> 14 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="1"];
+	10 [label="class=2"];
+	11 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+	12 [label="class=2"];
+	13 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+	11 -> 12 [label="< 1.4"];
+	11 -> 13 [label="..."];
 
 }
 1
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="1"];
-	15 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 10 [label="< 3.8"];
-	6 -> 15 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-	11 [label="class=2"];
-	12 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
-	10 -> 11 [label="< 3.4"];
-	10 -> 12 [label="..."];
-
-	13 [label="class=2"];
-	14 [label="class=0"];
-
-	12 -> 13 [label="< 2.6"];
-	12 -> 14 [label="..."];
+	0 [label="class=2"];
 
 }
 2
@@ -73,7 +71,7 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
 
 }
@@ -84,29 +82,29 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 3"];
-	2 -> 4 [label="..."];
 
 }
 6
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="class=2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
+
+	3 [label="class=0"];
+	4 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 4 [label="..."];
 
 }
 7
@@ -118,209 +116,153 @@ digraph G {
 	1 [label="2"];
 	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.2"];
 	0 -> 6 [label="..."];
 
 	2 [label="class=0"];
 	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
+	7 [label="0"];
+	12 [label="class=2"];
 
-	1 -> 2 [label="< 3.8"];
+	1 -> 2 [label="< 3"];
 	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
 
 	4 [label="class=2"];
 	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
+	8 [label="class=2"];
+	9 [label="1"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
-	11 [label="class=2"];
-	12 [label="class=0"];
+	10 [label="class=2"];
+	11 [label="class=0"];
 
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 8
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
 
-	3 [label="0"];
-	6 [label="class=2"];
-
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
-
+	3 [label="class=0"];
 	4 [label="class=2"];
-	5 [label="class=0"];
 
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 4 [label="..."];
 
 }
 9
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
 
-	2 [label="class=0"];
 	3 [label="0"];
-	7 [label="0"];
-	10 [label="class=2"];
+	8 [label="class=2"];
 
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 3"];
-	6 -> 10 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
 
 	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
+	5 [label="1"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 10
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
 
-	2 [label="class=0"];
 	3 [label="0"];
-	7 [label="0"];
-	10 [label="1"];
-	15 [label="class=2"];
+	6 [label="class=2"];
 
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 10 [label="< 3.8"];
-	6 -> 15 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
 
 	4 [label="class=2"];
 	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-	11 [label="class=2"];
-	12 [label="0"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
-	10 -> 11 [label="< 3.4"];
-	10 -> 12 [label="..."];
-
-	13 [label="class=2"];
-	14 [label="class=0"];
-
-	12 -> 13 [label="< 2.6"];
-	12 -> 14 [label="..."];
 
 }
 11
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
 
 	3 [label="class=0"];
-	4 [label="1"];
+	4 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
+	2 -> 3 [label="< 2.6"];
 	2 -> 4 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
 
 }
 12
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
 
-	2 [label="class=0"];
 	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
+	6 [label="class=2"];
 
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
 
 	4 [label="class=2"];
 	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
 
 }
 13
@@ -330,16 +272,10 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
 
 }
 14
@@ -348,23 +284,33 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="0"];
+	4 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 4 [label="..."];
 
-	3 [label="0"];
+	2 [label="class=2"];
+	3 [label="class=0"];
+	5 [label="0"];
+	10 [label="class=2"];
+
+	1 -> 2 [label="< 1.4"];
+	1 -> 3 [label="..."];
+	4 -> 5 [label="< 3"];
+	4 -> 10 [label="..."];
+
 	6 [label="class=2"];
+	7 [label="1"];
 
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
-	4 [label="class=2"];
-	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="class=0"];
 
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
 }
 15
@@ -373,17 +319,41 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="2"];
+	8 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 8 [label="..."];
 
-	3 [label="class=0"];
+	2 [label="class=0"];
+	3 [label="0"];
+	9 [label="0"];
+	14 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	8 -> 9 [label="< 3"];
+	8 -> 14 [label="..."];
+
 	4 [label="class=2"];
+	5 [label="1"];
+	10 [label="class=2"];
+	11 [label="1"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+	12 [label="class=2"];
+	13 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+	11 -> 12 [label="< 1.4"];
+	11 -> 13 [label="..."];
 
 }
 16
@@ -392,21 +362,40 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="class=2"];
+	1 [label="2"];
+	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
+
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
+
+	10 [label="class=2"];
+	11 [label="class=0"];
+
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 17
-digraph G {
-	node [shape=box];
-
-	0 [label="class=2"];
-
-}
-18
 digraph G {
 	node [shape=box];
 
@@ -415,8 +404,39 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
+
+}
+18
+digraph G {
+	node [shape=box];
+
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	8 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 19
@@ -425,81 +445,77 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="0"];
+	4 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 4 [label="..."];
 
-	3 [label="0"];
+	2 [label="class=2"];
+	3 [label="class=0"];
+	5 [label="0"];
+	10 [label="class=2"];
+
+	1 -> 2 [label="< 1.4"];
+	1 -> 3 [label="..."];
+	4 -> 5 [label="< 3"];
+	4 -> 10 [label="..."];
+
 	6 [label="class=2"];
+	7 [label="1"];
 
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
-	4 [label="class=2"];
-	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="class=0"];
 
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
 }
 20
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="class=2"];
+	3 [label="0"];
+	6 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
 }
 21
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
 
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="..."];
-
+	3 [label="class=0"];
 	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
 
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 4 [label="..."];
 
 }
 22
@@ -509,30 +525,40 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="2"];
-	6 [label="2"];
+	8 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 8 [label="..."];
 
 	2 [label="class=0"];
 	3 [label="0"];
-	7 [label="0"];
-	10 [label="class=2"];
+	9 [label="0"];
+	14 [label="class=2"];
 
-	1 -> 2 [label="< 3.8"];
+	1 -> 2 [label="< 3"];
 	1 -> 3 [label="..."];
-	6 -> 7 [label="< 3"];
-	6 -> 10 [label="..."];
+	8 -> 9 [label="< 3"];
+	8 -> 14 [label="..."];
 
 	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
+	5 [label="1"];
+	10 [label="class=2"];
+	11 [label="1"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+	12 [label="class=2"];
+	13 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+	11 -> 12 [label="< 1.4"];
+	11 -> 13 [label="..."];
 
 }
 23
@@ -541,72 +567,68 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="2"];
+	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	10 [label="class=2"];
+	11 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 24
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
 
-	2 [label="class=0"];
 	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
+	8 [label="class=2"];
 
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
 
 	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
+	5 [label="1"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
 
-	11 [label="class=2"];
-	12 [label="class=0"];
+	6 [label="class=2"];
+	7 [label="class=0"];
 
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 25
@@ -615,87 +637,89 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="0"];
+	4 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 4 [label="..."];
 
+	2 [label="class=2"];
 	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
+	5 [label="0"];
+	10 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
+	1 -> 2 [label="< 1.4"];
+	1 -> 3 [label="..."];
+	4 -> 5 [label="< 3"];
+	4 -> 10 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	6 [label="class=2"];
+	7 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
 }
 26
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="1"];
+	3 [label="0"];
+	6 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	4 [label="class=2"];
+	5 [label="class=0"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
 }
 27
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
 
 	3 [label="0"];
-	6 [label="class=2"];
+	8 [label="class=2"];
 
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
 
 	4 [label="class=2"];
-	5 [label="class=0"];
+	5 [label="1"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 28
@@ -704,29 +728,37 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="2"];
+	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="1"];
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	10 [label="class=2"];
+	11 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 29
@@ -735,366 +767,138 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="0"];
+	4 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 4 [label="..."];
 
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
+	2 [label="class=2"];
+	3 [label="class=0"];
+	5 [label="0"];
+	10 [label="class=2"];
 
-	1 -> 2 [label="< 3.8"];
+	1 -> 2 [label="< 1.4"];
 	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="..."];
+	4 -> 5 [label="< 3"];
+	4 -> 10 [label="..."];
 
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
+	6 [label="class=2"];
+	7 [label="1"];
 
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
-	11 [label="class=2"];
-	12 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="class=0"];
 
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
 }
 30
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 3"];
-	6 -> 10 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
+	0 [label="class=2"];
 
 }
 31
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="1"];
+	3 [label="0"];
+	8 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	4 [label="class=2"];
+	5 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	6 [label="class=2"];
+	7 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 32
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 33
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 [label="class=2"];
 
 }
 34
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
 
-	2 [label="class=0"];
 	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
+	6 [label="class=2"];
 
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
 
 	4 [label="class=2"];
 	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
 
 }
 35
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 36
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 3"];
-	6 -> 10 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
+	0 [label="class=2"];
 
 }
 37
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="1"];
-	15 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 10 [label="< 3.8"];
-	6 -> 15 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-	11 [label="class=2"];
-	12 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
-	10 -> 11 [label="< 3.4"];
-	10 -> 12 [label="..."];
-
-	13 [label="class=2"];
-	14 [label="class=0"];
-
-	12 -> 13 [label="< 2.6"];
-	12 -> 14 [label="..."];
+	0 [label="class=2"];
 
 }
 38
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 [label="class=2"];
 
 }
 39
@@ -1106,7 +910,7 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
 
 }
@@ -1114,41 +918,7 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 [label="class=2"];
 
 }
 41
@@ -1169,55 +939,77 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
 
-	2 [label="class=0"];
 	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
+	6 [label="class=2"];
 
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
 
 	4 [label="class=2"];
 	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
 
 }
 44
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="3"];
+
+	1 [label="class=0"];
+	2 [label="class=2"];
+
+	0 -> 1 [label="< 2.6"];
+	0 -> 2 [label="..."];
 
 }
 45
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="3"];
+
+	1 [label="2"];
+	6 [label="2"];
+
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
+
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
+
+	10 [label="class=2"];
+	11 [label="class=0"];
+
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 46
@@ -1226,31 +1018,41 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="2"];
+	8 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 8 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
+	2 [label="class=0"];
+	3 [label="0"];
+	9 [label="0"];
+	14 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	8 -> 9 [label="< 3"];
+	8 -> 14 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	4 [label="class=2"];
+	5 [label="1"];
+	10 [label="class=2"];
+	11 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	6 [label="class=2"];
+	7 [label="class=0"];
+	12 [label="class=2"];
+	13 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+	11 -> 12 [label="< 1.4"];
+	11 -> 13 [label="..."];
 
 }
 47
@@ -1264,45 +1066,7 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="1"];
-	15 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 10 [label="< 3.8"];
-	6 -> 15 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-	11 [label="class=2"];
-	12 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
-	10 -> 11 [label="< 3.4"];
-	10 -> 12 [label="..."];
-
-	13 [label="class=2"];
-	14 [label="class=0"];
-
-	12 -> 13 [label="< 2.6"];
-	12 -> 14 [label="..."];
+	0 [label="class=2"];
 
 }
 49
@@ -1312,16 +1076,10 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
 
 }
 50
@@ -1335,48 +1093,50 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 [label="class=2"];
 
 }
 52
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="3"];
+
+	1 [label="2"];
+	8 [label="2"];
+
+	0 -> 1 [label="< 2.2"];
+	0 -> 8 [label="..."];
+
+	2 [label="class=0"];
+	3 [label="0"];
+	9 [label="0"];
+	14 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	8 -> 9 [label="< 3"];
+	8 -> 14 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="1"];
+	10 [label="class=2"];
+	11 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+	12 [label="class=2"];
+	13 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+	11 -> 12 [label="< 1.4"];
+	11 -> 13 [label="..."];
 
 }
 53
@@ -1392,41 +1152,40 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="2"];
+	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	10 [label="class=2"];
+	11 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 55
-digraph G {
-	node [shape=box];
-
-	0 [label="class=2"];
-
-}
-56
 digraph G {
 	node [shape=box];
 
@@ -1435,8 +1194,43 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
+
+}
+56
+digraph G {
+	node [shape=box];
+
+	0 [label="3"];
+
+	1 [label="0"];
+	4 [label="2"];
+
+	0 -> 1 [label="< 2.2"];
+	0 -> 4 [label="..."];
+
+	2 [label="class=2"];
+	3 [label="class=0"];
+	5 [label="0"];
+	10 [label="class=2"];
+
+	1 -> 2 [label="< 1.4"];
+	1 -> 3 [label="..."];
+	4 -> 5 [label="< 3"];
+	4 -> 10 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="1"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+
+	8 [label="class=2"];
+	9 [label="class=0"];
+
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
 }
 57
@@ -1448,7 +1242,7 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
 
 }
@@ -1463,18 +1257,18 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
 
 	3 [label="class=0"];
 	4 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
+	2 -> 3 [label="< 2.6"];
 	2 -> 4 [label="..."];
 
 }
@@ -1487,7 +1281,7 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
 
 }
@@ -1497,17 +1291,33 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="0"];
+	4 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 4 [label="..."];
 
+	2 [label="class=2"];
 	3 [label="class=0"];
-	4 [label="class=2"];
+	5 [label="0"];
+	10 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	1 -> 2 [label="< 1.4"];
+	1 -> 3 [label="..."];
+	4 -> 5 [label="< 3"];
+	4 -> 10 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="1"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+
+	8 [label="class=2"];
+	9 [label="class=0"];
+
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
 }
 62
@@ -1516,31 +1326,11 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 3"];
-	6 -> 10 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
+	0 -> 1 [label="< 2.6"];
+	0 -> 2 [label="..."];
 
 }
 63
@@ -1552,7 +1342,7 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
 
 }
@@ -1560,72 +1350,28 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 65
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 66
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 67
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 68
@@ -1634,56 +1380,82 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="class=2"];
+	1 [label="2"];
+	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
+
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
+
+	10 [label="class=2"];
+	11 [label="class=0"];
+
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 69
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
 
-	3 [label="0"];
-	6 [label="class=2"];
-
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
-
+	3 [label="class=0"];
 	4 [label="class=2"];
-	5 [label="class=0"];
 
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 4 [label="..."];
 
 }
 70
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 71
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="class=0"];
+	4 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 4 [label="..."];
 
 }
 72
@@ -1697,136 +1469,42 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 74
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 75
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	0 [label="class=2"];
 
 }
 76
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 77
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 [label="class=2"];
 
 }
 78
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	0 [label="class=2"];
 
 }
 79
@@ -1835,31 +1513,37 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="2"];
+	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	10 [label="class=2"];
+	11 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 80
@@ -1868,44 +1552,48 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="2"];
+	8 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 8 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
+	2 [label="class=0"];
+	3 [label="0"];
+	9 [label="0"];
+	14 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	8 -> 9 [label="< 3"];
+	8 -> 14 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	4 [label="class=2"];
+	5 [label="1"];
+	10 [label="class=2"];
+	11 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	6 [label="class=2"];
+	7 [label="class=0"];
+	12 [label="class=2"];
+	13 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+	11 -> 12 [label="< 1.4"];
+	11 -> 13 [label="..."];
 
 }
 81
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 82
@@ -1914,65 +1602,43 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 -> 1 [label="< 2.6"];
+	0 -> 2 [label="..."];
 
 }
 83
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	6 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
 }
 84
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 3"];
-	2 -> 4 [label="..."];
+	0 [label="class=2"];
 
 }
 85
@@ -1981,139 +1647,39 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 -> 1 [label="< 2.6"];
+	0 -> 2 [label="..."];
 
 }
 86
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 87
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 88
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 [label="class=2"];
 
 }
 89
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 90
@@ -2122,197 +1688,135 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="0"];
+	4 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 4 [label="..."];
 
+	2 [label="class=2"];
 	3 [label="class=0"];
-	4 [label="1"];
+	5 [label="0"];
+	10 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	1 -> 2 [label="< 1.4"];
+	1 -> 3 [label="..."];
+	4 -> 5 [label="< 3"];
+	4 -> 10 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	6 [label="class=2"];
+	7 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
 }
 91
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
 
-	3 [label="0"];
-	6 [label="class=2"];
-
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
-
+	3 [label="class=0"];
 	4 [label="class=2"];
-	5 [label="class=0"];
 
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 4 [label="..."];
 
 }
 92
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 93
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 [label="class=2"];
 
 }
 94
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	8 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 95
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="1"];
+	3 [label="0"];
+	8 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	4 [label="class=2"];
+	5 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	6 [label="class=2"];
+	7 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 96
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 97
@@ -2326,103 +1830,45 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 99
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 [label="class=2"];
 
 }
 100
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="1"];
+	3 [label="0"];
+	8 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	4 [label="class=2"];
+	5 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	6 [label="class=2"];
+	7 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 101
@@ -2434,91 +1880,55 @@ digraph G {
 	1 [label="2"];
 	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.2"];
 	0 -> 6 [label="..."];
 
 	2 [label="class=0"];
 	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
+	7 [label="0"];
+	12 [label="class=2"];
 
-	1 -> 2 [label="< 3.8"];
+	1 -> 2 [label="< 3"];
 	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
 
 	4 [label="class=2"];
 	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
+	8 [label="class=2"];
+	9 [label="1"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
-	11 [label="class=2"];
-	12 [label="class=0"];
+	10 [label="class=2"];
+	11 [label="class=0"];
 
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 102
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 103
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	0 [label="class=2"];
 
 }
 104
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="0"];
-	6 [label="class=2"];
-
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
+	0 [label="class=2"];
 
 }
 105
@@ -2539,20 +1949,38 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 108
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	8 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 109
@@ -2564,40 +1992,34 @@ digraph G {
 	1 [label="2"];
 	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.2"];
 	0 -> 6 [label="..."];
 
 	2 [label="class=0"];
 	3 [label="0"];
 	7 [label="0"];
-	10 [label="1"];
-	15 [label="class=2"];
+	12 [label="class=2"];
 
-	1 -> 2 [label="< 3.8"];
+	1 -> 2 [label="< 3"];
 	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 10 [label="< 3.8"];
-	6 -> 15 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
 
 	4 [label="class=2"];
 	5 [label="class=0"];
 	8 [label="class=2"];
-	9 [label="class=0"];
-	11 [label="class=2"];
-	12 [label="0"];
+	9 [label="1"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
+	7 -> 8 [label="< 1.4"];
 	7 -> 9 [label="..."];
-	10 -> 11 [label="< 3.4"];
-	10 -> 12 [label="..."];
 
-	13 [label="class=2"];
-	14 [label="class=0"];
+	10 [label="class=2"];
+	11 [label="class=0"];
 
-	12 -> 13 [label="< 2.6"];
-	12 -> 14 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 110
@@ -2611,52 +2033,32 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="1"];
-	15 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 10 [label="< 3.8"];
-	6 -> 15 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-	11 [label="class=2"];
-	12 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
-	10 -> 11 [label="< 3.4"];
-	10 -> 12 [label="..."];
-
-	13 [label="class=2"];
-	14 [label="class=0"];
-
-	12 -> 13 [label="< 2.6"];
-	12 -> 14 [label="..."];
+	0 [label="class=2"];
 
 }
 112
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	6 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
 }
 113
@@ -2668,7 +2070,7 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
 
 }
@@ -2676,70 +2078,28 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 115
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 116
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	0 [label="class=2"];
 
 }
 117
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="0"];
-	6 [label="class=2"];
-
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
+	0 [label="class=2"];
 
 }
 118
@@ -2753,13 +2113,7 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 120
@@ -2783,88 +2137,150 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 3"];
-	2 -> 4 [label="..."];
 
 }
 123
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="3"];
+
+	1 [label="2"];
+	6 [label="2"];
+
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
+
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
+
+	10 [label="class=2"];
+	11 [label="class=0"];
+
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 124
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="0"];
-	6 [label="class=2"];
-
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
+	0 [label="class=2"];
 
 }
 125
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	8 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 126
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	0 [label="class=2"];
 
 }
 127
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	8 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 128
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	6 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
 }
 129
@@ -2873,31 +2289,33 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="0"];
+	4 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 4 [label="..."];
 
+	2 [label="class=2"];
 	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
+	5 [label="0"];
+	10 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
+	1 -> 2 [label="< 1.4"];
+	1 -> 3 [label="..."];
+	4 -> 5 [label="< 3"];
+	4 -> 10 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	6 [label="class=2"];
+	7 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
 }
 130
@@ -2906,71 +2324,71 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="0"];
+	4 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 4 [label="..."];
 
+	2 [label="class=2"];
 	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
+	5 [label="0"];
+	10 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
+	1 -> 2 [label="< 1.4"];
+	1 -> 3 [label="..."];
+	4 -> 5 [label="< 3"];
+	4 -> 10 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	6 [label="class=2"];
+	7 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
 }
 131
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	8 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 132
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 133
@@ -2980,122 +2398,134 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="class=0"];
-	2 [label="class=2"];
+	2 [label="2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
+
+	3 [label="class=0"];
+	4 [label="class=2"];
+
+	2 -> 3 [label="< 1.8"];
+	2 -> 4 [label="..."];
 
 }
 134
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 135
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	6 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
 }
 136
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 [label="class=2"];
 
 }
 137
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="1"];
+	3 [label="0"];
+	6 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	4 [label="class=2"];
+	5 [label="class=0"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
 }
 138
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="class=2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
+
+	3 [label="class=0"];
+	4 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 4 [label="..."];
 
 }
 139
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="3"];
+
+	1 [label="0"];
+	4 [label="2"];
+
+	0 -> 1 [label="< 2.2"];
+	0 -> 4 [label="..."];
+
+	2 [label="class=2"];
+	3 [label="class=0"];
+	5 [label="0"];
+	10 [label="class=2"];
+
+	1 -> 2 [label="< 1.4"];
+	1 -> 3 [label="..."];
+	4 -> 5 [label="< 3"];
+	4 -> 10 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="1"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+
+	8 [label="class=2"];
+	9 [label="class=0"];
+
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
 }
 140
@@ -3104,31 +2534,41 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="2"];
+	8 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 8 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
+	2 [label="class=0"];
+	3 [label="0"];
+	9 [label="0"];
+	14 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	8 -> 9 [label="< 3"];
+	8 -> 14 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	4 [label="class=2"];
+	5 [label="1"];
+	10 [label="class=2"];
+	11 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	6 [label="class=2"];
+	7 [label="class=0"];
+	12 [label="class=2"];
+	13 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+	11 -> 12 [label="< 1.4"];
+	11 -> 13 [label="..."];
 
 }
 141
@@ -3140,28 +2580,34 @@ digraph G {
 	1 [label="2"];
 	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.2"];
 	0 -> 6 [label="..."];
 
 	2 [label="class=0"];
 	3 [label="0"];
 	7 [label="0"];
-	10 [label="class=2"];
+	12 [label="class=2"];
 
-	1 -> 2 [label="< 3.8"];
+	1 -> 2 [label="< 3"];
 	1 -> 3 [label="..."];
 	6 -> 7 [label="< 3"];
-	6 -> 10 [label="..."];
+	6 -> 12 [label="..."];
 
 	4 [label="class=2"];
 	5 [label="class=0"];
 	8 [label="class=2"];
-	9 [label="class=0"];
+	9 [label="1"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
+	7 -> 8 [label="< 1.4"];
 	7 -> 9 [label="..."];
+
+	10 [label="class=2"];
+	11 [label="class=0"];
+
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 142
@@ -3177,108 +2623,32 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 -> 1 [label="< 2.6"];
+	0 -> 2 [label="..."];
 
 }
 144
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 145
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 146
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="0"];
-	6 [label="class=2"];
-
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
+	0 [label="class=2"];
 
 }
 147
@@ -3290,97 +2660,11 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
 
 }
 148
-digraph G {
-	node [shape=box];
-
-	0 [label="class=2"];
-
-}
-149
-digraph G {
-	node [shape=box];
-
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 3"];
-	6 -> 10 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
-
-}
-150
-digraph G {
-	node [shape=box];
-
-	0 [label="class=2"];
-
-}
-151
-digraph G {
-	node [shape=box];
-
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
-
-}
-152
 digraph G {
 	node [shape=box];
 
@@ -3389,8 +2673,86 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
+
+}
+149
+digraph G {
+	node [shape=box];
+
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	6 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+
+}
+150
+digraph G {
+	node [shape=box];
+
+	0 [label="3"];
+
+	1 [label="2"];
+	6 [label="2"];
+
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
+
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
+
+	10 [label="class=2"];
+	11 [label="class=0"];
+
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
+
+}
+151
+digraph G {
+	node [shape=box];
+
+	0 [label="class=2"];
+
+}
+152
+digraph G {
+	node [shape=box];
+
+	0 [label="class=2"];
 
 }
 153
@@ -3411,111 +2773,33 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 3"];
-	6 -> 10 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
+	0 [label="class=2"];
 
 }
 156
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 157
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
 
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="1"];
-	15 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 10 [label="< 3.8"];
-	6 -> 15 [label="..."];
-
+	3 [label="class=0"];
 	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-	11 [label="class=2"];
-	12 [label="0"];
 
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
-	10 -> 11 [label="< 3.4"];
-	10 -> 12 [label="..."];
-
-	13 [label="class=2"];
-	14 [label="class=0"];
-
-	12 -> 13 [label="< 2.6"];
-	12 -> 14 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 4 [label="..."];
 
 }
 158
@@ -3532,28 +2816,10 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
 
 }
 160
@@ -3563,16 +2829,10 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
 
 }
 161
@@ -3582,30 +2842,10 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
 
 }
 162
@@ -3619,7 +2859,19 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="class=0"];
+	4 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 4 [label="..."];
 
 }
 164
@@ -3636,30 +2888,10 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
 
 }
 166
@@ -3673,31 +2905,7 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 168
@@ -3711,38 +2919,14 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	0 [label="class=2"];
 
 }
 170
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	0 [label="class=2"];
 
 }
 171
@@ -3751,57 +2935,77 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 3"];
-	6 -> 10 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
+	0 -> 1 [label="< 2.6"];
+	0 -> 2 [label="..."];
 
 }
 172
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="class=2"];
+	3 [label="0"];
+	8 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 173
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="3"];
+
+	1 [label="0"];
+	4 [label="2"];
+
+	0 -> 1 [label="< 2.2"];
+	0 -> 4 [label="..."];
+
+	2 [label="class=2"];
+	3 [label="class=0"];
+	5 [label="0"];
+	10 [label="class=2"];
+
+	1 -> 2 [label="< 1.4"];
+	1 -> 3 [label="..."];
+	4 -> 5 [label="< 3"];
+	4 -> 10 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="1"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+
+	8 [label="class=2"];
+	9 [label="class=0"];
+
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
 }
 174
@@ -3810,17 +3014,37 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="2"];
+	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
 
-	3 [label="class=0"];
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
+
 	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
 
-	2 -> 3 [label="< 3"];
-	2 -> 4 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
+
+	10 [label="class=2"];
+	11 [label="class=0"];
+
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 175
@@ -3832,7 +3056,7 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
 
 	3 [label="class=0"];
@@ -3858,7 +3082,7 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
 
 }
@@ -3866,70 +3090,14 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 [label="class=2"];
 
 }
 179
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 180
@@ -3943,39 +3111,19 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
 
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="..."];
-
+	3 [label="class=0"];
 	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
 
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 4 [label="..."];
 
 }
 182
@@ -3989,19 +3137,25 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="class=2"];
+	3 [label="0"];
+	6 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
 }
 184
@@ -4015,31 +3169,7 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 186
@@ -4048,36 +3178,40 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="0"];
+	4 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 4 [label="..."];
 
-	3 [label="0"];
+	2 [label="class=2"];
+	3 [label="class=0"];
+	5 [label="0"];
+	10 [label="class=2"];
+
+	1 -> 2 [label="< 1.4"];
+	1 -> 3 [label="..."];
+	4 -> 5 [label="< 3"];
+	4 -> 10 [label="..."];
+
 	6 [label="class=2"];
+	7 [label="1"];
 
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
-	4 [label="class=2"];
-	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="class=0"];
 
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
 }
 187
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 188
@@ -4091,35 +3225,10 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="0"];
-	6 [label="class=2"];
-
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-
-}
-190
-digraph G {
-	node [shape=box];
-
 	0 [label="class=2"];
 
 }
-191
+190
 digraph G {
 	node [shape=box];
 
@@ -4128,8 +3237,15 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
+
+}
+191
+digraph G {
+	node [shape=box];
+
+	0 [label="class=2"];
 
 }
 192
@@ -4138,29 +3254,37 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="2"];
+	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="1"];
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	10 [label="class=2"];
+	11 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 193
@@ -4174,7 +3298,39 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="3"];
+
+	1 [label="2"];
+	6 [label="2"];
+
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
+
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
+
+	10 [label="class=2"];
+	11 [label="class=0"];
+
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 195
@@ -4186,7 +3342,7 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
 
 }
@@ -4194,18 +3350,18 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
 
 	3 [label="class=0"];
 	4 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
+	2 -> 3 [label="< 2.6"];
 	2 -> 4 [label="..."];
 
 }
@@ -4223,28 +3379,10 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
 
 }
 199
@@ -4253,30 +3391,52 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="0"];
+	4 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 4 [label="..."];
 
+	2 [label="class=2"];
 	3 [label="class=0"];
-	4 [label="class=2"];
+	5 [label="0"];
+	10 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	1 -> 2 [label="< 1.4"];
+	1 -> 3 [label="..."];
+	4 -> 5 [label="< 3"];
+	4 -> 10 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="1"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+
+	8 [label="class=2"];
+	9 [label="class=0"];
+
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
 }
 200
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="class=2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
+
+	3 [label="class=0"];
+	4 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 4 [label="..."];
 
 }
 201
@@ -4286,36 +3446,40 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="2"];
-	6 [label="2"];
+	8 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 8 [label="..."];
 
 	2 [label="class=0"];
 	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
+	9 [label="0"];
+	14 [label="class=2"];
 
-	1 -> 2 [label="< 3.8"];
+	1 -> 2 [label="< 3"];
 	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="..."];
+	8 -> 9 [label="< 3"];
+	8 -> 14 [label="..."];
 
 	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
+	5 [label="1"];
+	10 [label="class=2"];
+	11 [label="1"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
-	11 [label="class=2"];
-	12 [label="class=0"];
+	6 [label="class=2"];
+	7 [label="class=0"];
+	12 [label="class=2"];
+	13 [label="class=0"];
 
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+	11 -> 12 [label="< 1.4"];
+	11 -> 13 [label="..."];
 
 }
 202
@@ -4324,81 +3488,47 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="0"];
+	4 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 4 [label="..."];
 
+	2 [label="class=2"];
 	3 [label="class=0"];
-	4 [label="1"];
+	5 [label="0"];
+	10 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	1 -> 2 [label="< 1.4"];
+	1 -> 3 [label="..."];
+	4 -> 5 [label="< 3"];
+	4 -> 10 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	6 [label="class=2"];
+	7 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
 }
 203
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	0 [label="class=2"];
 
 }
 204
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 3"];
-	6 -> 10 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
+	0 [label="class=2"];
 
 }
 205
@@ -4419,122 +3549,52 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 3"];
-	6 -> 10 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
+	0 [label="class=2"];
 
 }
 208
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="class=2"];
+	3 [label="0"];
+	8 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 209
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 [label="class=2"];
 
 }
 210
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 211
@@ -4546,7 +3606,7 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
 
 }
@@ -4561,63 +3621,70 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="class=2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	6 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
 }
 214
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="3"];
+
+	1 [label="0"];
+	4 [label="2"];
+
+	0 -> 1 [label="< 2.2"];
+	0 -> 4 [label="..."];
+
+	2 [label="class=2"];
+	3 [label="class=0"];
+	5 [label="0"];
+	10 [label="class=2"];
+
+	1 -> 2 [label="< 1.4"];
+	1 -> 3 [label="..."];
+	4 -> 5 [label="< 3"];
+	4 -> 10 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="1"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+
+	8 [label="class=2"];
+	9 [label="class=0"];
+
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
 }
 215
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
-
-}
-216
-digraph G {
-	node [shape=box];
-
 	0 [label="class=2"];
 
 }
-217
+216
 digraph G {
 	node [shape=box];
 
@@ -4626,40 +3693,65 @@ digraph G {
 	1 [label="2"];
 	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.2"];
 	0 -> 6 [label="..."];
 
 	2 [label="class=0"];
 	3 [label="0"];
 	7 [label="0"];
-	10 [label="1"];
-	15 [label="class=2"];
+	12 [label="class=2"];
 
-	1 -> 2 [label="< 3.8"];
+	1 -> 2 [label="< 3"];
 	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 10 [label="< 3.8"];
-	6 -> 15 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
 
 	4 [label="class=2"];
 	5 [label="class=0"];
 	8 [label="class=2"];
-	9 [label="class=0"];
-	11 [label="class=2"];
-	12 [label="0"];
+	9 [label="1"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
+	7 -> 8 [label="< 1.4"];
 	7 -> 9 [label="..."];
-	10 -> 11 [label="< 3.4"];
-	10 -> 12 [label="..."];
 
-	13 [label="class=2"];
-	14 [label="class=0"];
+	10 [label="class=2"];
+	11 [label="class=0"];
 
-	12 -> 13 [label="< 2.6"];
-	12 -> 14 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
+
+}
+217
+digraph G {
+	node [shape=box];
+
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	8 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 218
@@ -4669,55 +3761,35 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
 
 }
 219
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
 
-	2 [label="class=0"];
 	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
+	6 [label="class=2"];
 
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
 
 	4 [label="class=2"];
 	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
 
 }
 220
@@ -4731,84 +3803,46 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	6 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
 }
 222
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 223
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 3"];
-	6 -> 10 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
+	0 [label="class=2"];
 
 }
 224
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 225
@@ -4818,16 +3852,10 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
 
 }
 226
@@ -4836,149 +3864,107 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="1"];
-	15 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 10 [label="< 3.8"];
-	6 -> 15 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-	11 [label="class=2"];
-	12 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
-	10 -> 11 [label="< 3.4"];
-	10 -> 12 [label="..."];
-
-	13 [label="class=2"];
-	14 [label="class=0"];
-
-	12 -> 13 [label="< 2.6"];
-	12 -> 14 [label="..."];
+	0 -> 1 [label="< 2.6"];
+	0 -> 2 [label="..."];
 
 }
 227
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	8 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 228
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	0 [label="class=2"];
 
 }
 229
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="class=0"];
+	4 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 4 [label="..."];
 
 }
 230
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 [label="class=2"];
 
 }
 231
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="0"];
-	6 [label="class=2"];
-
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
+	0 [label="class=2"];
 
 }
 232
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	6 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
 }
 233
@@ -4990,7 +3976,7 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
 
 }
@@ -4998,32 +3984,44 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
 
 	3 [label="0"];
-	6 [label="class=2"];
+	8 [label="class=2"];
 
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
 
 	4 [label="class=2"];
-	5 [label="class=0"];
+	5 [label="1"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 235
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="3"];
+
+	1 [label="class=0"];
+	2 [label="class=2"];
+
+	0 -> 1 [label="< 2.6"];
+	0 -> 2 [label="..."];
 
 }
 236
@@ -5032,75 +4030,47 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="0"];
+	4 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 4 [label="..."];
 
+	2 [label="class=2"];
 	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
+	5 [label="0"];
+	10 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
+	1 -> 2 [label="< 1.4"];
+	1 -> 3 [label="..."];
+	4 -> 5 [label="< 3"];
+	4 -> 10 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	6 [label="class=2"];
+	7 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
 }
 237
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	0 [label="class=2"];
 
 }
 238
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="0"];
-	6 [label="class=2"];
-
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
+	0 [label="class=2"];
 
 }
 239
@@ -5114,13 +4084,7 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 241
@@ -5129,47 +4093,73 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="class=2"];
+	1 [label="2"];
+	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
+
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
+
+	10 [label="class=2"];
+	11 [label="class=0"];
+
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 242
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 3"];
-	6 -> 10 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
+	0 [label="class=2"];
 
 }
 243
+digraph G {
+	node [shape=box];
+
+	0 [label="class=2"];
+
+}
+244
+digraph G {
+	node [shape=box];
+
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="class=0"];
+	4 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 4 [label="..."];
+
+}
+245
 digraph G {
 	node [shape=box];
 
@@ -5178,22 +4168,8 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
-
-}
-244
-digraph G {
-	node [shape=box];
-
-	0 [label="class=2"];
-
-}
-245
-digraph G {
-	node [shape=box];
-
-	0 [label="class=2"];
 
 }
 246
@@ -5203,119 +4179,43 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
 
 }
 247
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 248
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	0 [label="class=2"];
 
 }
 249
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
 
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="..."];
-
+	3 [label="class=0"];
 	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
 
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 4 [label="..."];
 
 }
 250
@@ -5329,38 +4229,20 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="3"];
+
+	1 [label="class=0"];
+	2 [label="class=2"];
+
+	0 -> 1 [label="< 2.6"];
+	0 -> 2 [label="..."];
 
 }
 252
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 253
@@ -5372,7 +4254,7 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
 
 }
@@ -5380,64 +4262,14 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="1"];
-	15 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 10 [label="< 3.8"];
-	6 -> 15 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-	11 [label="class=2"];
-	12 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
-	10 -> 11 [label="< 3.4"];
-	10 -> 12 [label="..."];
-
-	13 [label="class=2"];
-	14 [label="class=0"];
-
-	12 -> 13 [label="< 2.6"];
-	12 -> 14 [label="..."];
+	0 [label="class=2"];
 
 }
 255
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	0 [label="class=2"];
 
 }
 256
@@ -5446,29 +4278,37 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="2"];
+	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="1"];
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	10 [label="class=2"];
+	11 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 257
@@ -5477,18 +4317,72 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="class=2"];
+	1 [label="2"];
+	8 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 8 [label="..."];
+
+	2 [label="class=0"];
+	3 [label="0"];
+	9 [label="0"];
+	14 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	8 -> 9 [label="< 3"];
+	8 -> 14 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="1"];
+	10 [label="class=2"];
+	11 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+	12 [label="class=2"];
+	13 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+	11 -> 12 [label="< 1.4"];
+	11 -> 13 [label="..."];
 
 }
 258
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	8 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 259
@@ -5502,13 +4396,31 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="class=2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	8 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 261
@@ -5520,7 +4432,7 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
 
 }
@@ -5530,11 +4442,37 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="class=2"];
+	1 [label="0"];
+	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
+
+	2 [label="2"];
+	5 [label="class=0"];
+	7 [label="0"];
+	12 [label="class=2"];
+
+	1 -> 2 [label="< 1.4"];
+	1 -> 5 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
+
+	3 [label="class=0"];
+	4 [label="class=2"];
+	8 [label="class=2"];
+	9 [label="1"];
+
+	2 -> 3 [label="< 3"];
+	2 -> 4 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
+
+	10 [label="class=2"];
+	11 [label="class=0"];
+
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 263
@@ -5543,166 +4481,138 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="2"];
+	8 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 8 [label="..."];
 
+	2 [label="class=0"];
 	3 [label="0"];
-	6 [label="class=2"];
+	9 [label="0"];
+	14 [label="class=2"];
 
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	8 -> 9 [label="< 3"];
+	8 -> 14 [label="..."];
 
 	4 [label="class=2"];
-	5 [label="class=0"];
+	5 [label="1"];
+	10 [label="class=2"];
+	11 [label="1"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+	12 [label="class=2"];
+	13 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+	11 -> 12 [label="< 1.4"];
+	11 -> 13 [label="..."];
 
 }
 264
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
 
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="..."];
-
+	3 [label="class=0"];
 	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
 
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 4 [label="..."];
 
 }
 265
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
 
-	2 [label="class=0"];
 	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
+	6 [label="class=2"];
 
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
 
 	4 [label="class=2"];
 	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
 
 }
 266
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="3"];
+
+	1 [label="2"];
+	6 [label="2"];
+
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
+
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
+
+	10 [label="class=2"];
+	11 [label="class=0"];
+
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 267
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 268
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="1"];
-	15 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 10 [label="< 3.8"];
-	6 -> 15 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-	11 [label="class=2"];
-	12 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
-	10 -> 11 [label="< 3.4"];
-	10 -> 12 [label="..."];
-
-	13 [label="class=2"];
-	14 [label="class=0"];
-
-	12 -> 13 [label="< 2.6"];
-	12 -> 14 [label="..."];
+	0 [label="class=2"];
 
 }
 269
@@ -5716,26 +4626,50 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	6 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
 }
 271
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="class=2"];
+	3 [label="0"];
+	6 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
 }
 272
@@ -5763,14 +4697,64 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	6 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
 }
 276
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="3"];
+
+	1 [label="2"];
+	6 [label="2"];
+
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
+
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
+
+	10 [label="class=2"];
+	11 [label="class=0"];
+
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 277
@@ -5791,31 +4775,31 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="1"];
+	3 [label="0"];
+	8 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	4 [label="class=2"];
+	5 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	6 [label="class=2"];
+	7 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 280
@@ -5825,71 +4809,41 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
 
 }
 281
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
 
-	2 [label="class=0"];
 	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
+	8 [label="class=2"];
 
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
 
 	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
+	5 [label="1"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
 
-	11 [label="class=2"];
-	12 [label="class=0"];
+	6 [label="class=2"];
+	7 [label="class=0"];
 
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 282
@@ -5898,56 +4852,58 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="0"];
+	4 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 4 [label="..."];
 
-	3 [label="0"];
+	2 [label="class=2"];
+	3 [label="class=0"];
+	5 [label="0"];
+	10 [label="class=2"];
+
+	1 -> 2 [label="< 1.4"];
+	1 -> 3 [label="..."];
+	4 -> 5 [label="< 3"];
+	4 -> 10 [label="..."];
+
 	6 [label="class=2"];
+	7 [label="1"];
 
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
-	4 [label="class=2"];
-	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="class=0"];
 
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
 }
 283
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
 
-	2 [label="class=0"];
 	3 [label="0"];
-	7 [label="0"];
-	10 [label="class=2"];
+	6 [label="class=2"];
 
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 3"];
-	6 -> 10 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
 
 	4 [label="class=2"];
 	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
 
 }
 284
@@ -5956,201 +4912,71 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 -> 1 [label="< 2.6"];
+	0 -> 2 [label="..."];
 
 }
 285
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 286
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	6 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
 }
 287
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 [label="class=2"];
 
 }
 288
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 289
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 290
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 [label="class=2"];
 
 }
 291
@@ -6159,39 +4985,11 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 -> 1 [label="< 2.6"];
+	0 -> 2 [label="..."];
 
 }
 292
@@ -6203,7 +5001,7 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
 
 }
@@ -6211,25 +5009,7 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="0"];
-	6 [label="class=2"];
-
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
+	0 [label="class=2"];
 
 }
 294
@@ -6243,26 +5023,14 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 296
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 297
@@ -6272,49 +5040,17 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
 
 }
 298
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	0 [label="class=2"];
 
 }
 299
@@ -6324,55 +5060,47 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="2"];
-	6 [label="2"];
+	8 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 8 [label="..."];
 
 	2 [label="class=0"];
 	3 [label="0"];
-	7 [label="0"];
-	10 [label="1"];
-	15 [label="class=2"];
+	9 [label="0"];
+	14 [label="class=2"];
 
-	1 -> 2 [label="< 3.8"];
+	1 -> 2 [label="< 3"];
 	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 10 [label="< 3.8"];
-	6 -> 15 [label="..."];
+	8 -> 9 [label="< 3"];
+	8 -> 14 [label="..."];
 
 	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-	11 [label="class=2"];
-	12 [label="0"];
+	5 [label="1"];
+	10 [label="class=2"];
+	11 [label="1"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
-	10 -> 11 [label="< 3.4"];
-	10 -> 12 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
-	13 [label="class=2"];
-	14 [label="class=0"];
+	6 [label="class=2"];
+	7 [label="class=0"];
+	12 [label="class=2"];
+	13 [label="class=0"];
 
-	12 -> 13 [label="< 2.6"];
-	12 -> 14 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+	11 -> 12 [label="< 1.4"];
+	11 -> 13 [label="..."];
 
 }
 300
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 301
@@ -6381,130 +5109,86 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 3"];
-	6 -> 10 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
+	0 -> 1 [label="< 2.6"];
+	0 -> 2 [label="..."];
 
 }
 302
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="0"];
-	6 [label="class=2"];
-
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
+	0 [label="class=2"];
 
 }
 303
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="3"];
+
+	1 [label="0"];
+	4 [label="2"];
+
+	0 -> 1 [label="< 2.2"];
+	0 -> 4 [label="..."];
+
+	2 [label="class=2"];
+	3 [label="class=0"];
+	5 [label="0"];
+	10 [label="class=2"];
+
+	1 -> 2 [label="< 1.4"];
+	1 -> 3 [label="..."];
+	4 -> 5 [label="< 3"];
+	4 -> 10 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="1"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+
+	8 [label="class=2"];
+	9 [label="class=0"];
+
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
 }
 304
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="class=2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
+
+	3 [label="class=0"];
+	4 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 4 [label="..."];
 
 }
 305
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 306
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 [label="class=2"];
 
 }
 307
@@ -6525,33 +5209,7 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 310
@@ -6560,95 +5218,55 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="2"];
+	8 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 8 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
+	2 [label="class=0"];
+	3 [label="0"];
+	9 [label="0"];
+	14 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	8 -> 9 [label="< 3"];
+	8 -> 14 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	4 [label="class=2"];
+	5 [label="1"];
+	10 [label="class=2"];
+	11 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	6 [label="class=2"];
+	7 [label="class=0"];
+	12 [label="class=2"];
+	13 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+	11 -> 12 [label="< 1.4"];
+	11 -> 13 [label="..."];
 
 }
 311
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 312
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 313
@@ -6664,44 +5282,54 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 -> 1 [label="< 2.6"];
+	0 -> 2 [label="..."];
 
 }
 315
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="3"];
+
+	1 [label="2"];
+	8 [label="2"];
+
+	0 -> 1 [label="< 2.2"];
+	0 -> 8 [label="..."];
+
+	2 [label="class=0"];
+	3 [label="0"];
+	9 [label="0"];
+	14 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	8 -> 9 [label="< 3"];
+	8 -> 14 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="1"];
+	10 [label="class=2"];
+	11 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+	12 [label="class=2"];
+	13 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+	11 -> 12 [label="< 1.4"];
+	11 -> 13 [label="..."];
 
 }
 316
@@ -6715,13 +5343,7 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 318
@@ -6737,62 +5359,48 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="2"];
+	8 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 8 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="1"];
+	2 [label="class=0"];
+	3 [label="0"];
+	9 [label="0"];
+	14 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	8 -> 9 [label="< 3"];
+	8 -> 14 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	4 [label="class=2"];
+	5 [label="1"];
+	10 [label="class=2"];
+	11 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	6 [label="class=2"];
+	7 [label="class=0"];
+	12 [label="class=2"];
+	13 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+	11 -> 12 [label="< 1.4"];
+	11 -> 13 [label="..."];
 
 }
 320
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 3"];
-	6 -> 10 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
+	0 [label="class=2"];
 
 }
 321
@@ -6801,24 +5409,56 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="2"];
+	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
 
-	3 [label="class=0"];
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
+
 	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
+
+	10 [label="class=2"];
+	11 [label="class=0"];
+
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 322
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="class=0"];
+	4 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 4 [label="..."];
 
 }
 323
@@ -6839,39 +5479,53 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 3"];
-	2 -> 4 [label="..."];
+	0 [label="class=2"];
 
 }
 326
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 327
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="3"];
+
+	1 [label="2"];
+	6 [label="2"];
+
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
+
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
+
+	10 [label="class=2"];
+	11 [label="class=0"];
+
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 328
@@ -6885,33 +5539,27 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 330
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 331
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="3"];
+
+	1 [label="class=0"];
+	2 [label="class=2"];
+
+	0 -> 1 [label="< 2.6"];
+	0 -> 2 [label="..."];
 
 }
 332
@@ -6921,43 +5569,17 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
 
 }
 333
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 334
@@ -6983,7 +5605,7 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
 
 }
@@ -6991,26 +5613,14 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 338
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 339
@@ -7031,19 +5641,7 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 3"];
-	2 -> 4 [label="..."];
+	0 [label="class=2"];
 
 }
 342
@@ -7052,75 +5650,51 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="2"];
+	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="1"];
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
-	7 [label="class=2"];
-	8 [label="class=0"];
+	10 [label="class=2"];
+	11 [label="class=0"];
 
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 343
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 344
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 345
@@ -7141,38 +5715,38 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	8 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 348
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 349
@@ -7181,54 +5755,47 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="class=2"];
+	1 [label="2"];
+	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
+
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
+
+	10 [label="class=2"];
+	11 [label="class=0"];
+
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 350
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 3"];
-	6 -> 10 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
-
-}
-351
-digraph G {
-	node [shape=box];
-
 	0 [label="class=2"];
 
 }
-352
+351
 digraph G {
 	node [shape=box];
 
@@ -7237,8 +5804,15 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
+
+}
+352
+digraph G {
+	node [shape=box];
+
+	0 [label="class=2"];
 
 }
 353
@@ -7248,51 +5822,23 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="class=0"];
-	2 [label="class=2"];
+	2 [label="2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
+
+	3 [label="class=0"];
+	4 [label="class=2"];
+
+	2 -> 3 [label="< 1.8"];
+	2 -> 4 [label="..."];
 
 }
 354
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 [label="class=2"];
 
 }
 355
@@ -7306,25 +5852,7 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="0"];
-	6 [label="class=2"];
-
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
+	0 [label="class=2"];
 
 }
 357
@@ -7333,44 +5861,18 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 3"];
-	6 -> 10 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
+	0 -> 1 [label="< 2.6"];
+	0 -> 2 [label="..."];
 
 }
 358
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 359
@@ -7379,39 +5881,11 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 -> 1 [label="< 2.6"];
+	0 -> 2 [label="..."];
 
 }
 360
@@ -7420,43 +5894,11 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="1"];
-	15 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 10 [label="< 3.8"];
-	6 -> 15 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-	11 [label="class=2"];
-	12 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
-	10 -> 11 [label="< 3.4"];
-	10 -> 12 [label="..."];
-
-	13 [label="class=2"];
-	14 [label="class=0"];
-
-	12 -> 13 [label="< 2.6"];
-	12 -> 14 [label="..."];
+	0 -> 1 [label="< 2.6"];
+	0 -> 2 [label="..."];
 
 }
 361
@@ -7468,7 +5910,7 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
 
 }
@@ -7478,81 +5920,51 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="2"];
+	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
 
+	2 [label="class=0"];
 	3 [label="0"];
-	6 [label="class=2"];
+	7 [label="0"];
+	12 [label="class=2"];
 
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
 
 	4 [label="class=2"];
 	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
+
+	10 [label="class=2"];
+	11 [label="class=0"];
+
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 363
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 364
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="1"];
-	15 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 10 [label="< 3.8"];
-	6 -> 15 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-	11 [label="class=2"];
-	12 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
-	10 -> 11 [label="< 3.4"];
-	10 -> 12 [label="..."];
-
-	13 [label="class=2"];
-	14 [label="class=0"];
-
-	12 -> 13 [label="< 2.6"];
-	12 -> 14 [label="..."];
+	0 [label="class=2"];
 
 }
 365
@@ -7561,80 +5973,18 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 -> 1 [label="< 2.6"];
+	0 -> 2 [label="..."];
 
 }
 366
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 [label="class=2"];
 
 }
 367
@@ -7648,33 +5998,7 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 369
@@ -7683,42 +6007,40 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="class=2"];
+	1 [label="0"];
+	4 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 4 [label="..."];
+
+	2 [label="class=2"];
+	3 [label="class=0"];
+	5 [label="0"];
+	10 [label="class=2"];
+
+	1 -> 2 [label="< 1.4"];
+	1 -> 3 [label="..."];
+	4 -> 5 [label="< 3"];
+	4 -> 10 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="1"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+
+	8 [label="class=2"];
+	9 [label="class=0"];
+
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
 }
 370
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 371
@@ -7732,13 +6054,7 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 373
@@ -7748,106 +6064,38 @@ digraph G {
 	0 [label="3"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
-
-	3 [label="0"];
-	6 [label="class=2"];
-
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
 
 }
 374
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 375
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
-
-	5 [label="class=2"];
-	6 [label="0"];
-
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	0 [label="class=2"];
 
 }
 376
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="0"];
-	6 [label="class=2"];
-
-	2 -> 3 [label="< 3"];
-	2 -> 6 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
+	0 [label="class=2"];
 
 }
 377
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="class=2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 [label="class=2"];
 
 }
 378
@@ -7856,85 +6104,59 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="class=2"];
+	1 [label="0"];
+	4 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 4 [label="..."];
+
+	2 [label="class=2"];
+	3 [label="class=0"];
+	5 [label="0"];
+	10 [label="class=2"];
+
+	1 -> 2 [label="< 1.4"];
+	1 -> 3 [label="..."];
+	4 -> 5 [label="< 3"];
+	4 -> 10 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="1"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+
+	8 [label="class=2"];
+	9 [label="class=0"];
+
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
 
 }
 379
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
 
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="0"];
-	10 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 3"];
-	6 -> 10 [label="..."];
-
+	3 [label="class=0"];
 	4 [label="class=2"];
-	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
 
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 4 [label="..."];
 
 }
 380
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 [label="class=2"];
 
 }
 381
@@ -7950,17 +6172,37 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="class=0"];
-	2 [label="2"];
+	1 [label="2"];
+	6 [label="2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
+	0 -> 1 [label="< 2.2"];
+	0 -> 6 [label="..."];
 
-	3 [label="class=0"];
+	2 [label="class=0"];
+	3 [label="0"];
+	7 [label="0"];
+	12 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	6 -> 7 [label="< 3"];
+	6 -> 12 [label="..."];
+
 	4 [label="class=2"];
+	5 [label="class=0"];
+	8 [label="class=2"];
+	9 [label="1"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	7 -> 8 [label="< 1.4"];
+	7 -> 9 [label="..."];
+
+	10 [label="class=2"];
+	11 [label="class=0"];
+
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
 
 }
 383
@@ -7972,7 +6214,7 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
 
 }
@@ -7980,79 +6222,75 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="2"];
+
+	1 [label="class=0"];
+	2 [label="3"];
+
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	8 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 8 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
 
 }
 385
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
 
-	3 [label="class=0"];
-	4 [label="1"];
-	9 [label="class=2"];
+	3 [label="0"];
+	6 [label="class=2"];
 
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="< 3.8"];
-	2 -> 9 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
 
-	5 [label="class=2"];
-	6 [label="0"];
+	4 [label="class=2"];
+	5 [label="class=0"];
 
-	4 -> 5 [label="< 3.4"];
-	4 -> 6 [label="..."];
-
-	7 [label="class=2"];
-	8 [label="class=0"];
-
-	6 -> 7 [label="< 2.6"];
-	6 -> 8 [label="..."];
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
 }
 386
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
 
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="..."];
-
+	3 [label="class=0"];
 	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
 
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 4 [label="..."];
 
 }
 387
@@ -8078,7 +6316,7 @@ digraph G {
 	1 [label="class=0"];
 	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 2.6"];
 	0 -> 2 [label="..."];
 
 }
@@ -8086,13 +6324,25 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
 	1 [label="class=0"];
-	2 [label="class=2"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
+	0 -> 1 [label="< 1.8"];
 	0 -> 2 [label="..."];
+
+	3 [label="0"];
+	6 [label="class=2"];
+
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="class=0"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
 
 }
 391
@@ -8106,58 +6356,14 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="2"];
-	6 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 [label="class=2"];
 
 }
 393
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
-
-	1 [label="class=0"];
-	2 [label="2"];
-
-	0 -> 1 [label="< 3"];
-	0 -> 2 [label="..."];
-
-	3 [label="class=0"];
-	4 [label="class=2"];
-
-	2 -> 3 [label="< 1.8"];
-	2 -> 4 [label="..."];
+	0 [label="class=2"];
 
 }
 394
@@ -8171,7 +6377,43 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="3"];
+
+	1 [label="2"];
+	8 [label="2"];
+
+	0 -> 1 [label="< 2.2"];
+	0 -> 8 [label="..."];
+
+	2 [label="class=0"];
+	3 [label="0"];
+	9 [label="0"];
+	14 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	8 -> 9 [label="< 3"];
+	8 -> 14 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="1"];
+	10 [label="class=2"];
+	11 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+	12 [label="class=2"];
+	13 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+	11 -> 12 [label="< 1.4"];
+	11 -> 13 [label="..."];
 
 }
 396
@@ -8180,84 +6422,36 @@ digraph G {
 
 	0 [label="3"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="class=2"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
-
-	2 [label="class=0"];
-	3 [label="0"];
-	7 [label="class=0"];
-	8 [label="1"];
-	13 [label="class=2"];
-
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 8 [label="< 3.8"];
-	6 -> 13 [label="..."];
-
-	4 [label="class=2"];
-	5 [label="class=0"];
-	9 [label="class=2"];
-	10 [label="0"];
-
-	3 -> 4 [label="< 2.6"];
-	3 -> 5 [label="..."];
-	8 -> 9 [label="< 3.4"];
-	8 -> 10 [label="..."];
-
-	11 [label="class=2"];
-	12 [label="class=0"];
-
-	10 -> 11 [label="< 2.6"];
-	10 -> 12 [label="..."];
+	0 -> 1 [label="< 2.6"];
+	0 -> 2 [label="..."];
 
 }
 397
 digraph G {
 	node [shape=box];
 
-	0 [label="3"];
+	0 [label="2"];
 
-	1 [label="2"];
-	6 [label="2"];
+	1 [label="class=0"];
+	2 [label="3"];
 
-	0 -> 1 [label="< 3"];
-	0 -> 6 [label="..."];
+	0 -> 1 [label="< 1.8"];
+	0 -> 2 [label="..."];
 
-	2 [label="class=0"];
 	3 [label="0"];
-	7 [label="0"];
-	10 [label="1"];
-	15 [label="class=2"];
+	6 [label="class=2"];
 
-	1 -> 2 [label="< 3.8"];
-	1 -> 3 [label="..."];
-	6 -> 7 [label="< 1.8"];
-	6 -> 10 [label="< 3.8"];
-	6 -> 15 [label="..."];
+	2 -> 3 [label="< 2.6"];
+	2 -> 6 [label="..."];
 
 	4 [label="class=2"];
 	5 [label="class=0"];
-	8 [label="class=2"];
-	9 [label="class=0"];
-	11 [label="class=2"];
-	12 [label="0"];
 
-	3 -> 4 [label="< 2.6"];
+	3 -> 4 [label="< 1.4"];
 	3 -> 5 [label="..."];
-	7 -> 8 [label="< 2.6"];
-	7 -> 9 [label="..."];
-	10 -> 11 [label="< 3.4"];
-	10 -> 12 [label="..."];
-
-	13 [label="class=2"];
-	14 [label="class=0"];
-
-	12 -> 13 [label="< 2.6"];
-	12 -> 14 [label="..."];
 
 }
 398
@@ -8271,6 +6465,42 @@ digraph G {
 digraph G {
 	node [shape=box];
 
-	0 [label="class=2"];
+	0 [label="3"];
+
+	1 [label="2"];
+	8 [label="2"];
+
+	0 -> 1 [label="< 2.2"];
+	0 -> 8 [label="..."];
+
+	2 [label="class=0"];
+	3 [label="0"];
+	9 [label="0"];
+	14 [label="class=2"];
+
+	1 -> 2 [label="< 3"];
+	1 -> 3 [label="..."];
+	8 -> 9 [label="< 3"];
+	8 -> 14 [label="..."];
+
+	4 [label="class=2"];
+	5 [label="1"];
+	10 [label="class=2"];
+	11 [label="1"];
+
+	3 -> 4 [label="< 1.4"];
+	3 -> 5 [label="..."];
+	9 -> 10 [label="< 1.4"];
+	9 -> 11 [label="..."];
+
+	6 [label="class=2"];
+	7 [label="class=0"];
+	12 [label="class=2"];
+	13 [label="class=0"];
+
+	5 -> 6 [label="< 1.4"];
+	5 -> 7 [label="..."];
+	11 -> 12 [label="< 1.4"];
+	11 -> 13 [label="..."];
 
 }

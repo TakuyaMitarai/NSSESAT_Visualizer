@@ -1,4 +1,4 @@
-<input type="text" bind:value={genValue} placeholder="Enter gen value">
+<input type="text" bind:value={genValue} placeholder="世代交代数">
 <button on:click={compileAndRunCpp}>NSSESAT実行</button>
 
 

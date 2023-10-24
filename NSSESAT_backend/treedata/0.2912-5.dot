@@ -1,0 +1,18 @@
+digraph G {
+node [shape=box];
+
+0 [label="3"];
+
+1 [label="class=0"];
+2 [label="2"];
+
+0 -> 1 [label="< 3"];
+0 -> 2 [label="..."];
+
+3 [label="class=0"];
+4 [label="class=2"];
+
+2 -> 3 [label="< 3"];
+2 -> 4 [label="..."];
+
+}

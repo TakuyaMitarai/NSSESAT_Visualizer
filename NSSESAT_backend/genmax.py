@@ -10,5 +10,5 @@ def update_generation_max(gen):
             break
 
     # ステップ 4: 更新された内容を parameters.txt に書き戻す
-    with open("./nsse/parameters.txt", "w") as f:
+    with open("./nssesat/parameters.txt", "w") as f:
         f.writelines(lines)
