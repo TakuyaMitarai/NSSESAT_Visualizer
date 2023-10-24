@@ -1,4 +1,6 @@
-<button on:click={compileAndRunCpp}>実行</button>
+<input type="text" bind:value={genValue} placeholder="Enter gen value">
+<button on:click={compileAndRunCpp}>NSSESAT実行</button>
+
 
 <script>
 	import { Scatter } from 'svelte-chartjs';
@@ -21,22 +23,31 @@
 	};
 
 	let imageBase64 = "";
+	let genValue = ''; // テキストボックスの値を保存する変数
 
 	async function compileAndRunCpp() {
-        try {
-            const response = await fetch("http://127.0.0.1:8000/compile_and_run_cpp", {
-                method: 'POST'
-            });
-            if (response.ok) {
-                const data = await response.json();
-                console.log(data.message, data.output);
-            } else {
-                console.error(`API Error: ${response.statusText}`);
-            }
-        } catch (error) {
-            console.error(`Fetch Error: ${error}`);
-        }
-    }
+		try {
+			const response = await fetch("http://127.0.0.1:8000/compile_and_run_cpp", {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({gen: genValue}) // gen値をサーバーに送信
+			});
+			if (response.ok) {
+				const data = await response.json();
+				console.log(data.message, data.output);
+				if (data.fetchRequired) {
+					fetchData();
+				}
+			} else {
+				console.error(`API Error: ${response.statusText}`);
+			}
+		} catch (error) {
+			console.error(`Fetch Error: ${error}`);
+		}
+	}
+
 	
 	async function sendPointData(point) {
 		try {

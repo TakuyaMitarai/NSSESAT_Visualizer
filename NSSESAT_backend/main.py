@@ -1,6 +1,7 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from genmax import update_generation_max
 from treeimagename import generate_tree_image
 import subprocess
 import base64
@@ -23,46 +24,31 @@ class PointData(BaseModel):
     clicked_point: str
 
 @app.post("/compile_and_run_cpp")
-async def compile_and_run_cpp():
+async def compile_and_run_cpp(request: Request):
     try:
-        # カレントディレクトリを変更
-        os.chdir("nssesat")
+        payload = await request.json()
+        gen_value = payload.get("gen", None)
+        if gen_value is not None:
+            print(f"Received gen value: {gen_value}")
+            update_generation_max(gen_value)
         
-        # コンパイル対象のC++ファイルを見つける
+        os.chdir("nssesat")
         cpp_files = glob.glob('*.cpp')
         cmd_compile = ["g++-13"] + cpp_files
-        
-        # C++のコンパイル
         subprocess.run(cmd_compile)
-        
-        # カレントディレクトリを元に戻す
         os.chdir("..")
         
-        # C++コンパイル後の実行
         result_cpp = subprocess.run(["./a.out"], cwd="./nssesat", stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-
-        # Pythonスクリプトの実行（C++の実行が成功した場合）
         if result_cpp.returncode == 0:
             result_py = subprocess.run(["python3", "treesplit.py"], cwd="./nssesat/treedescription", stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-            print(f"Python script return code: {result_py.returncode}")
-            print(f"Have {len(result_py.stdout)} bytes in stdout: {result_py.stdout}")
-            print(f"Have {len(result_py.stderr)} bytes in stderr: {result_py.stderr}")
-
             if result_py.returncode == 0:
-                return {"message": "Successfully compiled and executed both C++ and Python", "output_cpp": result_cpp.stdout, "output_py": result_py.stdout}
+                return {"message": "Successfully compiled and executed both C++ and Python", "fetchRequired": True}
             else:
                 return {"message": "Python script execution failed", "error_py": result_py.stderr}
-        
         else:
-            print(f"C++ Return code: {result_cpp.returncode}")
-            print(f"Have {len(result_cpp.stdout)} bytes in stdout: {result_cpp.stdout}")
-            print(f"Have {len(result_cpp.stderr)} bytes in stderr: {result_cpp.stderr}")
             return {"message": "C++ Compilation or execution failed", "error_cpp": result_cpp.stderr}
-
     except Exception as e:
-        print(f"An error occurred: {e}")
         return {"message": f"An error occurred: {e}"}
-
 
 @app.post("/set_point")
 async def set_point(point_data: PointData):
