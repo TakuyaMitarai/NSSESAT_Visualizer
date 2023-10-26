@@ -1,8 +1,10 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from genmax import update_generation_max
 from treeimagename import generate_tree_image
+from fileedit import fileedit
+from pathlib import Path
 import subprocess
 import base64
 import os
@@ -22,6 +24,14 @@ app.add_middleware(
 
 class PointData(BaseModel):
     clicked_point: str
+
+@app.post("/uploadfile/")
+async def upload_file(file: UploadFile = File(...)):
+    with open(Path.cwd() / "dataset.txt", "wb") as buffer:
+        buffer.write(file.file.read())
+    fileedit()
+    return {"filename": file.filename}
+
 
 @app.post("/compile_and_run_cpp")
 async def compile_and_run_cpp(request: Request):
@@ -73,7 +83,7 @@ async def set_point(point_data: PointData):
 
 @app.get("/get_data")
 async def get_data():
-    with open('data.txt', 'r') as f:
+    with open('result.txt', 'r') as f:
         lines = f.readlines()
     data_points = []
     for line in lines:

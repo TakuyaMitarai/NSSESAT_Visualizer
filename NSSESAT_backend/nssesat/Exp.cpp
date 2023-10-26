@@ -110,7 +110,7 @@ void Exp::training()
 // テストフェーズ
 void Exp::test()
 {
-	ofstream outputfile1("../data.txt");
+	ofstream outputfile1("../result.txt");
 	ofstream outputfile2("treedotfile.txt");
 
 	int i;

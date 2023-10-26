@@ -5,7 +5,7 @@ import subprocess
 
 def generate_tree_image(imagefilename):
     column_names = []
-    with open("name.txt", "r") as name_file:
+    with open("./nssesat/name/name.txt", "r") as name_file:
         for line in name_file:
             column_names.extend(line.strip().split())
             

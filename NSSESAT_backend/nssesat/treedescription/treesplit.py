@@ -14,7 +14,7 @@ with open("../treedotfile.txt", "r") as f:
     treedotfile_lines = f.readlines()
 
 # accnode.txt を読み込む
-with open("../../data.txt", "r") as f:
+with open("../../result.txt", "r") as f:
     accnode_lines = f.readlines()
 
 # 各木と対応する accnode データを読み込む

@@ -28,6 +28,17 @@
 	let nodeCount = 0;
 	let isSearching = false;
 
+	async function submitForm(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
+        const response = await fetch('http://127.0.0.1:8000/uploadfile/', {
+            method: "POST",
+            body: data,
+        });
+        const result = await response.json();
+        console.log(result);
+    }
+
     async function compileAndRunCpp() {
         isSearching = true;  // 探索を開始
         try {
@@ -117,19 +128,8 @@
 		padding: 0px;
 	}
 
-	.searching-text {
-        font-size: 24px;
-        font-weight: bold; 
-        text-align: center; 
-        position: fixed; 
-	
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
 	.table1 {
-		font-size: 36px; /* テキストのサイズ */
+		font-size: 24px; /* テキストのサイズ */
 	}
 
 	.input-container {
@@ -152,7 +152,7 @@
 	}
 
 	.input-container button {
-		background-color: #007BFF;/* ボタンの背景色 */
+		background-color: rgba(32, 178, 170, 0.7);/* ボタンの背景色 */
 		color: white;             /* ボタンのテキストカラー */
 		border: none;             /* ボタンの枠線を削除 */
 		border-radius: 5px;      /* 角を少し丸くする */
@@ -162,7 +162,6 @@
 	.input-container button:hover {
 		background-color: #0056b3;/* ホバー時のボタンの背景色 */
 	}
-
 
 	.banner {
 		background-color: rgba(32, 178, 170, 0.7); /* 透明度を0.5に設定 */
@@ -210,29 +209,72 @@
 		text-align: center;       /* テキストを中央揃えにする */
 		padding: 8px;             /* セル内のテキストと枠線の間にスペースを追加 */
 	}
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
+	.center {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		border: 1px solid #ccc; /* 枠で囲む */
+	}
+
+	.form-container {
+		text-align: center; /* フォーム内の要素を中央寄せ */
+	}
+
+	button {
+		background-color: rgba(32, 178, 170, 0.7); /* 背景色 */
+		color: white; /* テキスト色 */
+		border: none; /* ボーダーを削除 */
+		padding: 10px 20px; /* パディング */
+		cursor: pointer; /* カーソル */
+	}
+
+	button:hover {
+		background-color: rgba(32, 178, 170, 0.9); /* ホバー時の背景色 */
+	}
+
+	.main-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row; /* 横並びにする */
+	}
+
+	/* 既存のCSSに変更なし */
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 </style>
 
 
 <div class="flex-container">
   
 <div class="chart-container" style="display:block;width: 50% !important; margin: 0;">
-	<div class="input-container">
-		<input type="text" bind:value={genValue} placeholder="世代交代数">
-		<button on:click={compileAndRunCpp}> 探索 </button>
-	</div>
-	<div class="table1" style="display: flex; justify-content: center;">
-		<table>
-			<tr>
-				<th>　誤り率　</th>
-				<th>　ノード数　</th>
-			</tr>
-			<tr>
-				<td>{errorRate} %</td>
-				<td>{nodeCount}</td>
-			</tr>
-		</table>
-	</div>
+	<div class="main-container">
+		<div class="container">
+			<div class="center">
+				<form on:submit={submitForm} class="form-container">
+					<h2>データセット</h2>
+					<input type="file" name="file" accept=".txt">
+					<br>
+					<button type="submit">保存</button>
+				</form>
+			</div>
+		</div>
+	
+		<div class="input-container">
+			<input type="text" bind:value={genValue} placeholder="世代交代数">
+			<button on:click={compileAndRunCpp}> 探索 </button>
+		</div>
+	</div>	
 	{#if dataFromAPI.plotdata.length > 0}
 		<Scatter data={chartData} {options} />
 	{:else}
