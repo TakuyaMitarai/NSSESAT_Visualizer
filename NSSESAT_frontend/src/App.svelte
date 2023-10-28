@@ -16,8 +16,8 @@
 		datasets: [{
 			label: 'データセット1',
 			data: [],
-			backgroundColor: 'rgba(75, 192, 192, 0.2)',
-			borderColor: 'rgba(75, 192, 192, 1)',
+			backgroundColor: 'rgba(32, 178, 170, 1)',
+			borderColor: 'rgba(32, 178, 170, 1)',
 			borderWidth: 1
 		}]
 	};
@@ -275,9 +275,9 @@
 
 <div class="flex-container">
   
-<div class="chart-container" style="padding: 10px; display: block; width: 50% !important; margin: 0;">
-	<div class="inner-container" style="background-color: rgba(255, 255, 255, 0.5); width: 100%; height: 100%;">
-		<div class="main-container">
+<div class="chart-container" style="padding: 15px; display: block; width: 50% !important; margin: 0;">
+	<div class="inner-container" style="border: 2px solid rgba(32, 178, 170, 0.6); background-color: rgba(255, 255, 255, 0.5); width: 100%; height: 100%;">
+		<div class="main-container" style="padding: 10px;">
 			<div class="container">
 				<div class="center">
 					<form on:submit={submitForm} class="form-container">
@@ -295,8 +295,15 @@
 				<input type="text" bind:value={genValue} placeholder="世代交代数">
 				<button on:click={compileAndRunCpp}> 探索 </button>
 			</div>
-		</div>
-		<div class="table1" style="display: flex; justify-content: center;">
+		</div>	
+		{#if dataFromAPI.plotdata.length > 0}
+			<div class="scatter" style="padding: 20px;">
+				<Scatter data={chartData} {options} />
+			</div>
+		{:else}
+			<p>データがありません</p>
+		{/if}
+		<div class="table1" style="display: flex; justify-content: center; padding: 10px;">
 			<table>
 				<tr>
 					<th>　誤り率　</th>
@@ -307,14 +314,7 @@
 					<td>{nodeCount}</td>
 				</tr>
 			</table>
-		</div>	
-		{#if dataFromAPI.plotdata.length > 0}
-			<div class="scatter">
-				<Scatter data={chartData} {options} />
-			</div>
-		{:else}
-			<p>データがありません</p>
-		{/if}
+		</div>
 	</div>
 </div>
 
