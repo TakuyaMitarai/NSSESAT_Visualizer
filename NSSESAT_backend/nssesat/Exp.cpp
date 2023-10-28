@@ -66,7 +66,6 @@ void Exp::initialize(short n)
 	// 乱数初期化
 	srand(time(NULL));
 
-
 	cout << "適合率\t正解率\tノード数\t木の深さ\t平均適合率\t平均正解率\t平均ノード数\n";
 }
 

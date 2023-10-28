@@ -37,6 +37,10 @@ for line in treedotfile_lines:
 acc_data = [line.strip().split() for line in accnode_lines]
 
 # 出力ファイルを作成
+
+for filename in os.listdir("./treedata"):
+        os.remove(os.path.join("./treedata", filename))
+
 for i, (tree, acc) in enumerate(zip(tree_data, acc_data)):
     acc_value, node_value = acc
     filename = f"{acc_value}-{node_value}.dot" if acc_value and node_value else f"{i}.dot"

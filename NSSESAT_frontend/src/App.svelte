@@ -128,6 +128,17 @@
 		padding: 0px;
 	}
 
+	.searching-text {
+		font-size: 50px;
+		font-weight: bold; 
+		text-align: center; 
+		position: fixed; 
+
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
 	.table1 {
 		font-size: 24px; /* テキストのサイズ */
 	}
@@ -274,11 +285,23 @@
 			<input type="text" bind:value={genValue} placeholder="世代交代数">
 			<button on:click={compileAndRunCpp}> 探索 </button>
 		</div>
+	</div>
+	<div class="table1" style="display: flex; justify-content: center;">
+		<table>
+			<tr>
+				<th>　誤り率　</th>
+				<th>　ノード数　</th>
+			</tr>
+			<tr>
+				<td>{errorRate} %</td>
+				<td>{nodeCount}</td>
+			</tr>
+		</table>
 	</div>	
 	{#if dataFromAPI.plotdata.length > 0}
 		<Scatter data={chartData} {options} />
 	{:else}
-		<p>データがありません。</p>
+		<p>データがありません</p>
 	{/if}
 </div>
 
