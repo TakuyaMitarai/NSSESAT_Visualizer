@@ -29,15 +29,23 @@
 	let isSearching = false;
 
 	async function submitForm(event) {
-        event.preventDefault();
-        const data = new FormData(event.target);
-        const response = await fetch('http://127.0.0.1:8000/uploadfile/', {
-            method: "POST",
-            body: data,
-        });
-        const result = await response.json();
-        console.log(result);
-    }
+		event.preventDefault();
+		const data = new FormData(event.target);
+		const response = await fetch('http://127.0.0.1:8000/uploadfile/', {
+			method: "POST",
+			body: data,
+		});
+		const result = await response.json();
+		console.log(result);
+
+		// 送信が成功したら、"送信完了"と表示する
+		if(response.ok) {
+			document.getElementById("message").innerText = "保存完了";
+		} else {
+			document.getElementById("message").innerText = "保存失敗";
+		}
+}
+
 
     async function compileAndRunCpp() {
         isSearching = true;  // 探索を開始
@@ -89,8 +97,6 @@
 		}
 	}
 
-
-	// 既存のoptionsオブジェクト
 	let options = {
 		onClick: function(event, elements) {
 			if (elements.length > 0) {
@@ -126,6 +132,7 @@
 <style>
 	:global(body) {
 		padding: 0px;
+		background-color: rgba(32, 178, 170, 0.1);
 	}
 
 	.searching-text {
@@ -268,41 +275,47 @@
 
 <div class="flex-container">
   
-<div class="chart-container" style="display:block;width: 50% !important; margin: 0;">
-	<div class="main-container">
-		<div class="container">
-			<div class="center">
-				<form on:submit={submitForm} class="form-container">
-					<h2>データセット</h2>
-					<input type="file" name="file" accept=".txt">
-					<br>
-					<button type="submit">保存</button>
-				</form>
+<div class="chart-container" style="padding: 10px; display: block; width: 50% !important; margin: 0;">
+	<div class="inner-container" style="background-color: rgba(255, 255, 255, 0.5); width: 100%; height: 100%;">
+		<div class="main-container">
+			<div class="container">
+				<div class="center">
+					<form on:submit={submitForm} class="form-container">
+						<h2>データセット</h2>
+						<input type="file" name="file" accept=".txt">
+						<br>
+						<button type="submit">保存</button>
+					</form>
+					<!-- メッセージ表示領域を追加 -->
+					<p id="message"></p>
+				</div>
+			</div>		
+		
+			<div class="input-container">
+				<input type="text" bind:value={genValue} placeholder="世代交代数">
+				<button on:click={compileAndRunCpp}> 探索 </button>
 			</div>
 		</div>
-	
-		<div class="input-container">
-			<input type="text" bind:value={genValue} placeholder="世代交代数">
-			<button on:click={compileAndRunCpp}> 探索 </button>
-		</div>
+		<div class="table1" style="display: flex; justify-content: center;">
+			<table>
+				<tr>
+					<th>　誤り率　</th>
+					<th>　ノード数　</th>
+				</tr>
+				<tr>
+					<td>{errorRate} %</td>
+					<td>{nodeCount}</td>
+				</tr>
+			</table>
+		</div>	
+		{#if dataFromAPI.plotdata.length > 0}
+			<div class="scatter">
+				<Scatter data={chartData} {options} />
+			</div>
+		{:else}
+			<p>データがありません</p>
+		{/if}
 	</div>
-	<div class="table1" style="display: flex; justify-content: center;">
-		<table>
-			<tr>
-				<th>　誤り率　</th>
-				<th>　ノード数　</th>
-			</tr>
-			<tr>
-				<td>{errorRate} %</td>
-				<td>{nodeCount}</td>
-			</tr>
-		</table>
-	</div>	
-	{#if dataFromAPI.plotdata.length > 0}
-		<Scatter data={chartData} {options} />
-	{:else}
-		<p>データがありません</p>
-	{/if}
 </div>
 
 

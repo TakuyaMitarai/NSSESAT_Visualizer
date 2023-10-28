@@ -29,6 +29,6 @@ def generate_tree_image(imagefilename):
     with open("new_tree.dot", "w") as f:  # この出力ファイル名は変更しない
         f.write(new_dot_data)
 
-    result = subprocess.run(['dot', '-Tpng', '-Gdpi=300', '-o', png_output_path, 'new_tree.dot'], capture_output=True, text=True)
+    result = subprocess.run(['dot', '-Tpng', '-Gdpi=300', '-Gbgcolor=transparent', '-o', png_output_path, 'new_tree.dot'], capture_output=True, text=True)
     print("STDOUT:", result.stdout)
     print("STDERR:", result.stderr)

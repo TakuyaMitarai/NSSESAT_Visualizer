@@ -250,6 +250,7 @@ void Tree::generate_dot(ofstream& outputfile2)
 
 	outputfile2 << "digraph G {" << endl;
 	outputfile2 << "	node [shape=box];" << endl;
+	outputfile2 << "	node [style=filled, fillcolor=white];" << endl;
 	outputfile2 << endl;
 
 	// 繝ｬ繝吶Ν縺ｮ譛螟ｧ蛟､繧呈ｱゅａ繧�

@@ -1,30 +1,55 @@
 digraph G {
 node [shape=box];
+node [style=filled, fillcolor=white];
 
-0 [label="C1"];
+0 [label="C4"];
 
-1 [label="class=2"];
-2 [label="C4"];
+1 [label="C1"];
+8 [label="C3"];
 
-0 -> 1 [label="< 1.4"];
-0 -> 2 [label="..."];
+0 -> 1 [label="< 3"];
+0 -> 8 [label="..."];
 
-3 [label="class=0"];
-4 [label="C3"];
-
-2 -> 3 [label="< 2.6"];
-2 -> 4 [label="..."];
-
-5 [label="C2"];
-8 [label="class=2"];
-
-4 -> 5 [label="< 2.2"];
-4 -> 8 [label="..."];
-
-6 [label="class=2"];
+2 [label="C2"];
 7 [label="class=0"];
+9 [label="C1"];
+18 [label="class=2"];
 
-5 -> 6 [label="< 1.8"];
-5 -> 7 [label="..."];
+1 -> 2 [label="< 3"];
+1 -> 7 [label="..."];
+8 -> 9 [label="< 3"];
+8 -> 18 [label="..."];
+
+3 [label="C3"];
+6 [label="class=0"];
+10 [label="class=2"];
+11 [label="C2"];
+
+2 -> 3 [label="< 2.2"];
+2 -> 6 [label="..."];
+9 -> 10 [label="< 1.8"];
+9 -> 11 [label="..."];
+
+4 [label="class=0"];
+5 [label="class=2"];
+12 [label="C3"];
+17 [label="class=0"];
+
+3 -> 4 [label="< 1.8"];
+3 -> 5 [label="..."];
+11 -> 12 [label="< 2.6"];
+11 -> 17 [label="..."];
+
+13 [label="C1"];
+16 [label="class=2"];
+
+12 -> 13 [label="< 1.8"];
+12 -> 16 [label="..."];
+
+14 [label="class=2"];
+15 [label="class=0"];
+
+13 -> 14 [label="< 3"];
+13 -> 15 [label="..."];
 
 }
