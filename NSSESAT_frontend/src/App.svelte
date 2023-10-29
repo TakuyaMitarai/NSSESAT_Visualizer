@@ -323,7 +323,6 @@
   <div class="img_container">
 	  <img src={`data:image/png;base64,${imageBase64}`} alt="Visual representation of a tree structure" />
   </div>
-{:else}
 {/if}
 
 {#if isSearching}
