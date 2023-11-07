@@ -2,6 +2,10 @@
     NSSESAT
 </div>
 
+{#if isSearching}
+	<img src="pen.gif" alt="Loading animation" class="image-style">
+{/if}
+
 <script>
 	import { Scatter } from 'svelte-chartjs';
 	import { Chart, LinearScale } from 'chart.js';
@@ -44,10 +48,11 @@
 		} else {
 			document.getElementById("message").innerText = "保存失敗";
 		}
-}
+	}
+	
+	let showAnimation = false;
 
-
-    async function compileAndRunCpp() {
+	async function compileAndRunCpp() {
         isSearching = true;  // 探索を開始
         try {
             const response = await fetch("http://127.0.0.1:8000/compile_and_run_cpp", {
@@ -72,7 +77,6 @@
             isSearching = false;  // 探索を終了
         }
     }
-
 	
 	async function sendPointData(point) {
 		try {
@@ -270,6 +274,10 @@
 		justify-content: center;
 		align-items: center;
 	}
+	.image-style {
+		display: block; /* 画像をブロック要素として扱う */
+		margin: 0 auto; /* 左右のマージンを自動で均等にして中央揃え */
+	}
 </style>
 
 
@@ -318,21 +326,9 @@
 	</div>
 </div>
 
-
 {#if imageBase64}
   <div class="img_container">
 	  <img src={`data:image/png;base64,${imageBase64}`} alt="Visual representation of a tree structure" />
   </div>
 {/if}
-
-{#if isSearching}
-    <div class="searching-text">探索中...</div>
-    <style>
-        body {
-            pointer-events: none;
-            opacity: 0.5;
-        }
-    </style>
-{/if}
-
 </div>
