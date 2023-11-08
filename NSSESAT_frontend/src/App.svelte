@@ -139,17 +139,6 @@
 		background-color: rgba(32, 178, 170, 0.1);
 	}
 
-	.searching-text {
-		font-size: 50px;
-		font-weight: bold; 
-		text-align: center; 
-		position: fixed; 
-
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-
 	.table1 {
 		font-size: 24px; /* テキストのサイズ */
 	}
@@ -275,8 +264,9 @@
 		align-items: center;
 	}
 	.image-style {
-		display: block; /* 画像をブロック要素として扱う */
-		margin: 0 auto; /* 左右のマージンを自動で均等にして中央揃え */
+	display: block; /* 画像をブロック要素として扱う */
+	margin: 0 auto; /* 左右のマージンを自動で均等にして中央揃え */
+	transform-origin: center; /* 縮小の基点を中央にする */
 	}
 </style>
 
@@ -314,12 +304,12 @@
 		<div class="table1" style="display: flex; justify-content: center; padding: 10px;">
 			<table>
 				<tr>
-					<th>　誤り率　</th>
 					<th>　ノード数　</th>
+					<th>　正答率　</th>
 				</tr>
 				<tr>
-					<td>{errorRate} %</td>
-					<td>{nodeCount}</td>
+					<td>{errorRate} </td>
+					<td>{nodeCount} %</td>
 				</tr>
 			</table>
 		</div>

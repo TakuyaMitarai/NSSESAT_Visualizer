@@ -42,8 +42,8 @@ for filename in os.listdir("./treedata"):
         os.remove(os.path.join("./treedata", filename))
 
 for i, (tree, acc) in enumerate(zip(tree_data, acc_data)):
-    acc_value, node_value = acc
-    filename = f"{acc_value}-{node_value}.dot" if acc_value and node_value else f"{i}.dot"
+    node_value, acc_value = acc
+    filename = f"{node_value}-{acc_value}.dot" if acc_value and node_value else f"{i}.dot"
     filepath = os.path.join("treedata", filename)
     with open(filepath, "w") as f:
         f.write("\n".join(tree))

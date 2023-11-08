@@ -67,8 +67,8 @@ async def set_point(point_data: PointData):
 
     # 数値1と数値2を取得
     value1, value2 = map(float, imagefilename.split('-'))
-    value1 = value1 * 100
-    value1 = round(value1, 3)
+    value2 = value2 * 100
+    value2 = round(value2, 3)
 
     try:
         generate_tree_image(imagefilename)  # imagefilenameを渡す
@@ -88,5 +88,5 @@ async def get_data():
     data_points = []
     for line in lines:
         x, y = line.strip().split()
-        data_points.append({"x": float(x), "y": int(y)})
+        data_points.append({"x": int(x), "y": float(y)})
     return {"plotdata": data_points}

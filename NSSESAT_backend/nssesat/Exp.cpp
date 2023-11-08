@@ -117,7 +117,7 @@ void Exp::test()
 		for(short j = 0; j < data->testDataNum; j++)
 			treePop->pop[i]->traverse(data->testData[j]);
 		treePop->pop[i]->calcFit();
-		outputfile1 << treePop->pop[i]->accuracy << " " << treePop->pop[i]->entropy << endl;
+		outputfile1 << treePop->pop[i]->entropy << " " << 1 - treePop->pop[i]->accuracy << endl;
 	}
 	for(i = 0; i < para->TreePopNum / 2; i++) {
 		// treePop->pop[i]->print(treePop->pop[i]->root);
