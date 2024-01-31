@@ -2,124 +2,56 @@ digraph G {
 node [shape=box];
 node [style=filled, fillcolor=white];
 
-0 [label="C4"];
+0 [label="Humidity3pm"];
 
-1 [label="C2"];
-31 [label="C3"];
+1 [label="Sunshine"];
+12 [label="Humidity3pm"];
 
-0 -> 1 [label="< 3"];
-0 -> 31 [label="..."];
+0 -> 1 [label="< 63.625"];
+0 -> 12 [label="..."];
 
-2 [label="C3"];
-11 [label="C1"];
-24 [label="C1"];
-32 [label="C2"];
-51 [label="class=2"];
+2 [label="WindGustSpeed"];
+11 [label="class=1"];
+13 [label="Temp3pm"];
+20 [label="class=0"];
 
-1 -> 2 [label="< 1.5"];
-1 -> 11 [label="< 3.5"];
-1 -> 24 [label="..."];
-31 -> 32 [label="< 3"];
-31 -> 51 [label="..."];
+1 -> 2 [label="< 6.95"];
+1 -> 11 [label="..."];
+12 -> 13 [label="< 74.75"];
+12 -> 20 [label="..."];
 
-3 [label="C1"];
-10 [label="class=2"];
-12 [label="C3"];
-23 [label="class=0"];
-25 [label="C3"];
-30 [label="class=0"];
-33 [label="C1"];
-38 [label="C1"];
+3 [label="class=1"];
+4 [label="Evaporation"];
+14 [label="Pressure3pm"];
+17 [label="WindDir3pm"];
 
-2 -> 3 [label="< 3"];
-2 -> 10 [label="..."];
-11 -> 12 [label="< 3"];
-11 -> 23 [label="..."];
-24 -> 25 [label="< 1.5"];
-24 -> 30 [label="..."];
-32 -> 33 [label="< 3"];
-32 -> 38 [label="..."];
+2 -> 3 [label="< 38"];
+2 -> 4 [label="..."];
+13 -> 14 [label="< 21.1875"];
+13 -> 17 [label="..."];
 
-4 [label="C4"];
-9 [label="class=0"];
-13 [label="C3"];
-22 [label="class=2"];
-26 [label="class=0"];
-27 [label="C4"];
-34 [label="class=2"];
-35 [label="C3"];
-39 [label="C2"];
-44 [label="C3"];
-
-3 -> 4 [label="< 3"];
-3 -> 9 [label="..."];
-12 -> 13 [label="< 3"];
-12 -> 22 [label="..."];
-25 -> 26 [label="< 3"];
-25 -> 27 [label="..."];
-33 -> 34 [label="< 3"];
-33 -> 35 [label="..."];
-38 -> 39 [label="< 1.5"];
-38 -> 44 [label="..."];
-
-5 [label="C1"];
-8 [label="class=2"];
-14 [label="class=0"];
-15 [label="C1"];
-28 [label="class=0"];
-29 [label="class=2"];
-36 [label="class=0"];
-37 [label="class=2"];
-40 [label="class=2"];
-41 [label="C3"];
-45 [label="class=0"];
-46 [label="C2"];
-
-4 -> 5 [label="< 1.5"];
-4 -> 8 [label="..."];
-13 -> 14 [label="< 2"];
-13 -> 15 [label="..."];
-27 -> 28 [label="< 1.5"];
-27 -> 29 [label="..."];
-35 -> 36 [label="< 2"];
-35 -> 37 [label="..."];
-39 -> 40 [label="< 3.5"];
-39 -> 41 [label="..."];
-44 -> 45 [label="< 2"];
-44 -> 46 [label="..."];
-
-6 [label="class=1"];
-7 [label="class=0"];
-16 [label="C4"];
-21 [label="class=0"];
-42 [label="class=0"];
-43 [label="class=2"];
-47 [label="C1"];
-50 [label="class=0"];
-
-5 -> 6 [label="< 1.5"];
-5 -> 7 [label="..."];
-15 -> 16 [label="< 1.5"];
-15 -> 21 [label="..."];
-41 -> 42 [label="< 2"];
-41 -> 43 [label="..."];
-46 -> 47 [label="< 3.5"];
-46 -> 50 [label="..."];
-
-17 [label="C2"];
-20 [label="class=2"];
-48 [label="class=2"];
-49 [label="class=0"];
-
-16 -> 17 [label="< 1.5"];
-16 -> 20 [label="..."];
-47 -> 48 [label="< 3"];
-47 -> 49 [label="..."];
-
+5 [label="Pressure3pm"];
+8 [label="WindGustSpeed"];
+15 [label="class=0"];
+16 [label="class=1"];
 18 [label="class=1"];
 19 [label="class=0"];
 
-17 -> 18 [label="< 3"];
+4 -> 5 [label="< 6.375"];
+4 -> 8 [label="..."];
+14 -> 15 [label="< 1018.4"];
+14 -> 16 [label="..."];
+17 -> 18 [label="< 11.25"];
 17 -> 19 [label="..."];
+
+6 [label="class=0"];
+7 [label="class=1"];
+9 [label="class=1"];
+10 [label="class=0"];
+
+5 -> 6 [label="< 1018.4"];
+5 -> 7 [label="..."];
+8 -> 9 [label="< 56"];
+8 -> 10 [label="..."];
 
 }
