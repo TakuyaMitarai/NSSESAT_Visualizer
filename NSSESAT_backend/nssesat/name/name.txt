@@ -1,1 +1,1 @@
-Pregnancies Glucose BloodPressure SkinThickness Insulin BMI DiabetesPedigreeFunction Age
+C1 C2 C3 C4

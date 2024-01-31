@@ -44,7 +44,7 @@ async def compile_and_run_cpp(request: Request):
         
         os.chdir("nssesat")
         cpp_files = glob.glob('*.cpp')
-        cmd_compile = ["g++-13"] + cpp_files
+        cmd_compile = ["g++-13", "-Ofast"] + cpp_files
         subprocess.run(cmd_compile)
         os.chdir("..")
         

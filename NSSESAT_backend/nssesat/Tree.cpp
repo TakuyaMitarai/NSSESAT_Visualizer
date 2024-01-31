@@ -167,6 +167,9 @@ void Tree::modify()
 void Tree::calcFit()
 {	
 	entropy = root->countNode();
+	if(entropy < 2) {
+		entropy = 100000;
+	}
 	/*
 	if(correctNum > 1)
 		entropy = root->calcEnt() / (float)correctNum / (float)log((double)correctNum) * log(2.0);
