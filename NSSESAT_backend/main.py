@@ -1,8 +1,14 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from genmax import update_generation_max
 from treeimagename import generate_tree_image
+from fileedit import fileedit
+from pathlib import Path
+import subprocess
 import base64
+import os
+import glob
 
 app = FastAPI()
 
@@ -19,26 +25,68 @@ app.add_middleware(
 class PointData(BaseModel):
     clicked_point: str
 
+@app.post("/uploadfile/")
+async def upload_file(file: UploadFile = File(...)):
+    with open(Path.cwd() / "dataset.txt", "wb") as buffer:
+        buffer.write(file.file.read())
+    fileedit()
+    return {"filename": file.filename}
+
+
+@app.post("/compile_and_run_cpp")
+async def compile_and_run_cpp(request: Request):
+    try:
+        payload = await request.json()
+        gen_value = payload.get("gen", None)
+        if gen_value is not None:
+            print(f"Received gen value: {gen_value}")
+            update_generation_max(gen_value)
+        
+        os.chdir("nssesat")
+        cpp_files = glob.glob('*.cpp')
+        cmd_compile = ["g++-13", "-Ofast"] + cpp_files
+        subprocess.run(cmd_compile)
+        os.chdir("..")
+        
+        result_cpp = subprocess.run(["./a.out"], cwd="./nssesat", stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        if result_cpp.returncode == 0:
+            result_py = subprocess.run(["python3", "treesplit.py"], cwd="./nssesat/treedescription", stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            if result_py.returncode == 0:
+                return {"message": "Successfully compiled and executed both C++ and Python", "fetchRequired": True}
+            else:
+                return {"message": "Python script execution failed", "error_py": result_py.stderr}
+        else:
+            return {"message": "C++ Compilation or execution failed", "error_cpp": result_cpp.stderr}
+    except Exception as e:
+        return {"message": f"An error occurred: {e}"}
+
 @app.post("/set_point")
 async def set_point(point_data: PointData):
     imagefilename = point_data.clicked_point
     print("Received imagefilename:", imagefilename)
+
+    # 数値1と数値2を取得
+    value1, value2 = map(float, imagefilename.split('-'))
+    value2 = value2 * 100
+    value2 = round(value2, 3)
+
     try:
         generate_tree_image(imagefilename)  # imagefilenameを渡す
         with open(f"output.png", "rb") as img_file:  # 出力ファイル名も変更
             img_base64 = base64.b64encode(img_file.read()).decode("utf-8")
-        return {"message": "Data received", "image": img_base64}
+        return {"message": "Data received", "image": img_base64, "誤り率": value1, "ノード数": value2}
     except Exception as e:
         print(f"An error occurred while generating the tree image: {e}")
         return {"message": f"An error occurred: {e}"}
 
 
+
 @app.get("/get_data")
 async def get_data():
-    with open('data.txt', 'r') as f:
+    with open('result.txt', 'r') as f:
         lines = f.readlines()
     data_points = []
     for line in lines:
         x, y = line.strip().split()
-        data_points.append({"x": float(x), "y": int(y)})
+        data_points.append({"x": int(x), "y": float(y)})
     return {"plotdata": data_points}
