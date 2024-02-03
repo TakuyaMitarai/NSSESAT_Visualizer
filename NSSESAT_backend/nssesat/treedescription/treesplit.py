@@ -48,4 +48,29 @@ for i, (tree, acc) in enumerate(zip(tree_data, acc_data)):
     with open(filepath, "w") as f:
         f.write("\n".join(tree))
 
+import random
+
+def shuffle_data(file_path, shuffle_times=1):
+    # ファイルパスの生成
+    full_path = file_path
+
+    # ファイルの読み込み
+    with open(full_path, 'r') as file:
+        # スペース区切りでデータを読み込み、リストに格納
+        data = [line.strip().split(' ') for line in file]
+
+    # データのシャッフル
+    # 指定された回数だけシャッフルを実行
+    for _ in range(shuffle_times):
+        random.shuffle(data)
+
+    # ファイルへの上書き
+    with open(full_path, 'w') as file:
+        for line in data:
+            # スペース区切りでデータを書き込み
+            file.write(' '.join(line) + '\n')
+
+# 使用例
+shuffle_data('../Data/data.txt', shuffle_times=1)
+
 print("Completed!")
