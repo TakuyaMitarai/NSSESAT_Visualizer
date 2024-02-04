@@ -27,6 +27,5 @@ public:
 
 	Tree* bestTree;
 	Tree** pop;
-	vector<vector<Tree*>> nodepop;
-	vector<Tree*> bestacc;
+	vector<vector<Tree*>> bestacc;
 };

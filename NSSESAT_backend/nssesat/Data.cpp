@@ -56,10 +56,12 @@ Data::Data(char* dataName)
 		testDataNum = 1;
 		trainDataNum = allDataNum - 1;
 	} else {
-		testDataNum = allDataNum / para->CrossValNum;
-		trainDataNum = allDataNum - testDataNum;
+		trainDataNum = (allDataNum * 16)/ 25;
+		validationDataNum = (allDataNum * 4)/ 25;
+		testDataNum = allDataNum - trainDataNum - validationDataNum;
 	}
 	testData = new float* [testDataNum];
+	validationData = new float* [validationDataNum];
 	trainData = new float* [trainDataNum];
 	crossNum = -1;
 }
@@ -71,6 +73,7 @@ Data::~Data()
 	delete [] allData[i];
 	delete [] allData;
 	delete [] trainData;
+	delete [] validationData;
 	delete [] testData;
 	delete [] minAttValue;
 	delete [] gapAttValue;
@@ -80,7 +83,7 @@ Data::~Data()
 // n : クロスバリデーションの回数
 void Data::makeTestData(short n)
 {
-	short i, j, k;
+	short i, j, k, l;
 
 	crossNum = n;
 	// データ作成
@@ -90,11 +93,13 @@ void Data::makeTestData(short n)
 			testData[i] = allData[i];
 		}
 	} else {
-		for(i = 0, j = 0, k = 0; i < allDataNum; i++) {
-			if((j < testDataNum) && (i % para->CrossValNum == n))
-				testData[j++] = allData[i];
-			else
-				trainData[k++] = allData[i];
+		for(i = 0, j = 0, k = 0, l = 0; i < allDataNum; i++) {
+			if(j < trainDataNum)
+				trainData[j++] = allData[i];
+			else if(k < validationDataNum)
+				validationData[k++] = allData[i];
+			else 
+				testData[l++] = allData[i];
 		}
 	}
 	// 各属性値の最低値と最高値との差を求める

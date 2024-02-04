@@ -16,7 +16,7 @@ TreePop::TreePop()
 	genNum = 1;
 	bestTree = NULL;
 	pop = new Tree* [para->TreePopNum];	
-	for(i = 0; i < SPLIT_NUM + 1; i++) bestacc.push_back(NULL);
+	bestacc.resize(SPLIT_NUM + 1);
 
 	// �e�̂������_���ɐ���
 	for(i = 0; i < para->TreePopNum; i++)
@@ -182,14 +182,14 @@ void TreePop::newGeneration()
 				nodepop[k][i]->traverse(data->trainData[j]);
 			nodepop[k][i]->modify();
 			nodepop[k][i]->evalInit();
-			for(j = 0; j < data->testDataNum; j++)
-				nodepop[k][i]->traverse(data->testData[j]);
+			for(j = 0; j < data->validationDataNum; j++)
+				nodepop[k][i]->traverse(data->validationData[j]);
 			nodepop[k][i]->calcFit();
 			if(int(nodepop[k][i]->entropy) < SPLIT_NUM  && int(nodepop[k][i]->entropy) > 0) {
-				if(bestacc[int(nodepop[k][i]->entropy)] == NULL) {
-					bestacc[int(nodepop[k][i]->entropy)] = new Tree(nodepop[k][i]);
-				}else if(bestacc[int(nodepop[k][i]->entropy)]->accuracy > nodepop[k][i]->accuracy) {
-					bestacc[int(nodepop[k][i]->entropy)] = new Tree(nodepop[k][i]);
+				if(bestacc[int(nodepop[k][i]->entropy)].empty()) {
+					bestacc[int(nodepop[k][i]->entropy)].push_back(new Tree(nodepop[k][i]));
+				} else if(bestacc[int(nodepop[k][i]->entropy)][bestacc[int(nodepop[k][i]->entropy)].size()-1]->accuracy > nodepop[k][i]->accuracy) {
+					bestacc[int(nodepop[k][i]->entropy)].push_back(new Tree(nodepop[k][i]));
 				}
 			}
 			nodepop[k][i]->evalInit();

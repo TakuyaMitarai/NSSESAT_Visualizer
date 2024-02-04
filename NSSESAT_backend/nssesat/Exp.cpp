@@ -112,7 +112,7 @@ void Exp::test()
 	ofstream outputfile1("../result.txt");
 	ofstream outputfile2("treedotfile.txt");
 
-	int i;
+	int i, j, k;
 	// for(i = 0; i < para->TreePopNum; i++) {
 	// 	treePop->pop[i]->evalInit();
 	// 	for(short j = 0; j < data->testDataNum; j++)
@@ -123,11 +123,14 @@ void Exp::test()
 	// }
 	int cnt = 0;
 	for(i = 0; i < treePop->bestacc.size(); i++) {
-		if(treePop->bestacc[i] != NULL) {
-			outputfile1 << treePop->bestacc[i]->entropy << " " << 1 - treePop->bestacc[i]->accuracy << endl;
-			outputfile2 << i - cnt << endl;
-			treePop->bestacc[i]->printDot(treePop->bestacc[i]->root, outputfile2);
-		} else {
+		for(j = 0; j < treePop->bestacc[i].size(); j++) {
+			treePop->bestacc[i][j]->evalInit();
+			for(short k = 0; k < data->testDataNum; k++)
+				treePop->bestacc[i][j]->traverse(data->testData[k]);
+			treePop->bestacc[i][j]->calcFit();
+			outputfile1 << treePop->bestacc[i][j]->entropy << " " << 1 - treePop->bestacc[i][j]->accuracy << endl;
+			outputfile2 << cnt << endl;
+			treePop->bestacc[i][j]->printDot(treePop->bestacc[i][j]->root, outputfile2);
 			cnt++;
 		}
 	}

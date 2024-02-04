@@ -23,8 +23,10 @@ public:
 	short allDataNum;	// 全データ数
 	short trainDataNum;	// 訓練データ数
 	short testDataNum;	// テストデータ数
+	short validationDataNum; //バリデーションデータ数
 	short crossNum;		// クロスバリデーションの回数
 	float **allData;	// 全データ
 	float **trainData;	// 訓練データ
 	float **testData;	// テストデータ
+	float **validationData; //バリデーションデータ
 };

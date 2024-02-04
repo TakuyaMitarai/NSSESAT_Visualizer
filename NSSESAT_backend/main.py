@@ -9,6 +9,7 @@ import subprocess
 import base64
 import os
 import glob
+import random
 
 app = FastAPI()
 
@@ -25,11 +26,32 @@ app.add_middleware(
 class PointData(BaseModel):
     clicked_point: str
 
+def shuffle_data(file_path, shuffle_times=1):
+    # ファイルパスの生成
+    full_path = file_path
+
+    # ファイルの読み込み
+    with open(full_path, 'r') as file:
+        # スペース区切りでデータを読み込み、リストに格納
+        data = [line.strip().split(' ') for line in file]
+
+    # データのシャッフル
+    # 指定された回数だけシャッフルを実行
+    for _ in range(shuffle_times):
+        random.shuffle(data)
+
+    # ファイルへの上書き
+    with open(full_path, 'w') as file:
+        for line in data:
+            # スペース区切りでデータを書き込み
+            file.write(' '.join(line) + '\n')
+
 @app.post("/uploadfile/")
 async def upload_file(file: UploadFile = File(...)):
     with open(Path.cwd() / "dataset.txt", "wb") as buffer:
         buffer.write(file.file.read())
     fileedit()
+    shuffle_data('./nssesat/Data/data.txt', shuffle_times=1)
     return {"filename": file.filename}
 
 
@@ -44,7 +66,7 @@ async def compile_and_run_cpp(request: Request):
         
         os.chdir("nssesat")
         cpp_files = glob.glob('*.cpp')
-        cmd_compile = ["g++-13", "-Ofast"] + cpp_files
+        cmd_compile = ["g++-13", "-O2"] + cpp_files
         subprocess.run(cmd_compile)
         os.chdir("..")
         
