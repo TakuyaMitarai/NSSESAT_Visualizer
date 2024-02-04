@@ -111,24 +111,23 @@ void Exp::test()
 {
 	ofstream outputfile1("../result.txt");
 	ofstream outputfile2("treedotfile.txt");
+	ofstream outputfile3("../result2.txt");
 
 	int i, j, k;
-	// for(i = 0; i < para->TreePopNum; i++) {
-	// 	treePop->pop[i]->evalInit();
-	// 	for(short j = 0; j < data->testDataNum; j++)
-	// 		treePop->pop[i]->traverse(data->testData[j]);
-	// 	treePop->pop[i]->calcFit();
-	// 	if(treePop->pop[i]->entropy != 100000)
-	// 	outputfile1 << treePop->pop[i]->entropy << " " << 1 - treePop->pop[i]->accuracy << endl;
-	// }
 	int cnt = 0;
+	for(i = 0; i < para->TreePopNum / 2; i++) {
+		outputfile1 << treePop->pop[i]->entropy << " " << 1 - treePop->pop[i]->accuracy << endl;
+		outputfile2 << cnt << endl;
+		treePop->pop[i]->printDot(treePop->pop[i]->root, outputfile2);
+		cnt++;
+	}
 	for(i = 0; i < treePop->bestacc.size(); i++) {
 		for(j = 0; j < treePop->bestacc[i].size(); j++) {
 			treePop->bestacc[i][j]->evalInit();
 			for(short k = 0; k < data->testDataNum; k++)
 				treePop->bestacc[i][j]->traverse(data->testData[k]);
 			treePop->bestacc[i][j]->calcFit();
-			outputfile1 << treePop->bestacc[i][j]->entropy << " " << 1 - treePop->bestacc[i][j]->accuracy << endl;
+			outputfile3 << treePop->bestacc[i][j]->entropy << " " << 1 - treePop->bestacc[i][j]->accuracy << endl;
 			outputfile2 << cnt << endl;
 			treePop->bestacc[i][j]->printDot(treePop->bestacc[i][j]->root, outputfile2);
 			cnt++;

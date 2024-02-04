@@ -5,8 +5,23 @@ target_dir = "treedata"  # この部分は実際の相対パスまたは絶対�
 if not os.path.exists(target_dir):
     os.makedirs(target_dir)
 
-# 以降のコードは同じ
-# ...
+# ファイルパスを定義
+file_path1 = "../../result.txt"
+file_path2 = "../../result2.txt"
+output_file_path = "../../result3.txt"
+with open(file_path1, "r") as file1:
+        data1 = file1.read()
+
+# 2番目のファイルを読み込む
+with open(file_path2, "r") as file2:
+    data2 = file2.read()
+
+# 結合した内容を新しいファイルに書き出す
+with open(output_file_path, "w") as outfile:
+    # 最初のファイルの内容を書き出す
+    outfile.write(data1)
+    # 2番目のファイルの内容を書き出す
+    outfile.write(data2)
 
 
 # treedotfile.txt を読み込む
@@ -14,9 +29,10 @@ with open("../treedotfile.txt", "r") as f:
     treedotfile_lines = f.readlines()
 
 # accnode.txt を読み込む
-with open("../../result.txt", "r") as f:
+with open("../../result3.txt", "r") as f:
     accnode_lines = f.readlines()
 
+print(accnode_lines)
 # 各木と対応する accnode データを読み込む
 tree_data = []
 current_tree = []

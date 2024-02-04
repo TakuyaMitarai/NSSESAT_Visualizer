@@ -23,7 +23,14 @@
 			backgroundColor: 'rgba(32, 178, 170, 1)',
 			borderColor: 'rgba(32, 178, 170, 1)',
 			borderWidth: 1
-		}]
+		},
+		{
+			label: 'データセット2',
+			data: [],
+			backgroundColor: 'rgba(255, 99, 132, 1)',
+			borderColor: 'rgba(255, 99, 132, 1)',
+			borderWidth: 1
+    	}]
 	};
 
 	let imageBase64 = "";
@@ -67,6 +74,7 @@
                 console.log(data.message, data.output);
                 if (data.fetchRequired) {
                     fetchData();
+					fetchData2()
                 }
             } else {
                 console.error(`API Error: ${response.statusText}`);
@@ -129,8 +137,23 @@
 			console.error(`Fetch Error: ${error}`);
 		}
 	}
+	async function fetchData2() {
+		try {
+			const response = await fetch("http://127.0.0.1:8000/get_data2");
+			if (response.ok) {
+				dataFromAPI = await response.json();
+				chartData.datasets[1].data = dataFromAPI.plotdata;
+				console.log("Fetched Data: ", dataFromAPI);
+			} else {
+				console.error(`API Error: ${response.statusText}`);
+			}
+		} catch (error) {
+			console.error(`Fetch Error: ${error}`);
+		}
+	}
 
 	onMount(fetchData);
+	onMount(fetchData2);
 </script>
 
 <style>

@@ -101,14 +101,19 @@ async def set_point(point_data: PointData):
         print(f"An error occurred while generating the tree image: {e}")
         return {"message": f"An error occurred: {e}"}
 
-
-
 @app.get("/get_data")
 async def get_data():
-    with open('result.txt', 'r') as f:
+    return {"plotdata": read_data('result.txt')}
+
+@app.get("/get_data2")
+async def get_data2():
+    return {"plotdata": read_data('result2.txt')}
+
+def read_data(filename):
+    with open(filename, 'r') as f:
         lines = f.readlines()
     data_points = []
     for line in lines:
         x, y = line.strip().split()
         data_points.append({"x": int(x), "y": float(y)})
-    return {"plotdata": data_points}
+    return data_points

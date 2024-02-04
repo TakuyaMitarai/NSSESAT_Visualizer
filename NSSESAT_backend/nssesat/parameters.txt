@@ -5,5 +5,5 @@ ProbMutate		0.15
 TreePopNum		1200
 SprigPopNum		500
 ChildNodeNumMax	6
-GenerationMax	5000
+GenerationMax	10000
 DepthMax	    10
