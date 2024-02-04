@@ -20,15 +20,15 @@
 		datasets: [{
 			label: 'データセット1',
 			data: [],
-			backgroundColor: 'rgba(32, 178, 170, 1)',
-			borderColor: 'rgba(32, 178, 170, 1)',
+			backgroundColor: 'rgba(255, 99, 132, 1)',
+			borderColor: 'rgba(255, 99, 132, 1)',
 			borderWidth: 1
 		},
 		{
 			label: 'データセット2',
 			data: [],
-			backgroundColor: 'rgba(255, 99, 132, 1)',
-			borderColor: 'rgba(255, 99, 132, 1)',
+			backgroundColor: 'rgba(32, 178, 170, 1)',
+			borderColor: 'rgba(32, 178, 170, 1)',
 			borderWidth: 1
     	}]
 	};
@@ -128,7 +128,7 @@
 			const response = await fetch("http://127.0.0.1:8000/get_data");
 			if (response.ok) {
 				dataFromAPI = await response.json();
-				chartData.datasets[0].data = dataFromAPI.plotdata;
+				chartData.datasets[1].data = dataFromAPI.plotdata;
 				console.log("Fetched Data: ", dataFromAPI);
 			} else {
 				console.error(`API Error: ${response.statusText}`);
@@ -142,7 +142,7 @@
 			const response = await fetch("http://127.0.0.1:8000/get_data2");
 			if (response.ok) {
 				dataFromAPI = await response.json();
-				chartData.datasets[1].data = dataFromAPI.plotdata;
+				chartData.datasets[0].data = dataFromAPI.plotdata;
 				console.log("Fetched Data: ", dataFromAPI);
 			} else {
 				console.error(`API Error: ${response.statusText}`);

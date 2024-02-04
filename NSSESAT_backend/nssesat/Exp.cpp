@@ -121,6 +121,8 @@ void Exp::test()
 		treePop->pop[i]->printDot(treePop->pop[i]->root, outputfile2);
 		cnt++;
 	}
+
+	//　過学習防止策
 	for(i = 0; i < treePop->bestacc.size(); i++) {
 		for(j = 0; j < treePop->bestacc[i].size(); j++) {
 			treePop->bestacc[i][j]->evalInit();
@@ -133,6 +135,17 @@ void Exp::test()
 			cnt++;
 		}
 	}
+
+	// 最終世代のテスト
+	// for(i = 0; i < para->TreePopNum / 2; i++) {
+	// 	pop[i]->evalInit();
+	// 	for(short j = 0; j < data->testDataNum; j++)
+	// 		treePop->pop[i]->traverse(data->testData[j]);
+	// 	treePop->pop[i]->calcFit();
+	// 	outputfile3 << treePop->pop[i]->entropy << " " << 1 - treePop->pop[i]->accuracy << endl;
+	// 	outputfile2 << cnt << endl;
+	// 	treePop->pop[i]->printDot(treePop->pop[i]->root, outputfile2);
+	// }
 }
 
 // 新しい世代を生成
