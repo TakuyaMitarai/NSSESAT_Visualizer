@@ -1,1 +1,0 @@
-# NSSESAT_Visualizer

@@ -1,7 +1,0 @@
-digraph G {
-node [shape=box];
-node [style=filled, fillcolor=white];
-
-0 [label="class=1"];
-
-}
