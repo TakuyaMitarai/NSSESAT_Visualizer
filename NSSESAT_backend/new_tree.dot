@@ -1,0 +1,77 @@
+digraph G {
+node [shape=box];
+node [style=filled, fillcolor=white];
+
+0 [label="oldpeak"];
+
+1 [label="cp"];
+17 [label="cp"];
+
+0 -> 1 [label="< 2.48"];
+0 -> 17 [label="..."];
+
+2 [label="caa"];
+9 [label="caa"];
+18 [label="cp"];
+28 [label="caa"];
+
+1 -> 2 [label="< 0.9"];
+1 -> 9 [label="..."];
+17 -> 18 [label="< 2.4"];
+17 -> 28 [label="..."];
+
+3 [label="thall"];
+8 [label="class=0"];
+10 [label="class=1"];
+11 [label="thall"];
+19 [label="caa"];
+25 [label="caa"];
+29 [label="class=1"];
+30 [label="class=0"];
+
+2 -> 3 [label="< 0.8"];
+2 -> 8 [label="..."];
+9 -> 10 [label="< 0.8"];
+9 -> 11 [label="..."];
+18 -> 19 [label="< 0.9"];
+18 -> 25 [label="..."];
+28 -> 29 [label="< 0.8"];
+28 -> 30 [label="..."];
+
+4 [label="class=1"];
+5 [label="slp"];
+12 [label="class=0"];
+13 [label="class=1"];
+14 [label="slp"];
+20 [label="thall"];
+24 [label="class=0"];
+26 [label="class=1"];
+27 [label="class=0"];
+
+3 -> 4 [label="< 2.4"];
+3 -> 5 [label="..."];
+11 -> 12 [label="< 1.5"];
+11 -> 13 [label="< 2.4"];
+11 -> 14 [label="..."];
+19 -> 20 [label="< 0.8"];
+19 -> 24 [label="..."];
+25 -> 26 [label="< 0.8"];
+25 -> 27 [label="..."];
+
+6 [label="class=0"];
+7 [label="class=1"];
+15 [label="class=0"];
+16 [label="class=1"];
+21 [label="class=0"];
+22 [label="class=1"];
+23 [label="class=0"];
+
+5 -> 6 [label="< 1.6"];
+5 -> 7 [label="..."];
+14 -> 15 [label="< 1.6"];
+14 -> 16 [label="..."];
+20 -> 21 [label="< 1.5"];
+20 -> 22 [label="< 2.4"];
+20 -> 23 [label="..."];
+
+}
