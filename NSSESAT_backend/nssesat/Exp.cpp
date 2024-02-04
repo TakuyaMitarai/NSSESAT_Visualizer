@@ -115,13 +115,32 @@ void Exp::test()
 
 	int i, j, k;
 	int cnt = 0;
-	// 最終世代の訓練事例
-	for(i = 0; i < para->TreePopNum / 2; i++) {
-		outputfile1 << treePop->pop[i]->entropy << " " << 1 - treePop->pop[i]->accuracy << endl;
-		outputfile2 << cnt << endl;
-		treePop->pop[i]->printDot(treePop->pop[i]->root, outputfile2);
-		cnt++;
+	// 最終世代の訓練事例1
+	// for(i = 0; i < para->TreePopNum / 2; i++) {
+	// 	outputfile1 << treePop->pop[i]->entropy << " " << 1 - treePop->pop[i]->accuracy << endl;
+	// 	outputfile2 << cnt << endl;
+	// 	treePop->pop[i]->printDot(treePop->pop[i]->root, outputfile2);
+	// 	cnt++;
+	// }
+
+	// 最終世代の訓練事例2
+	vector<vector<Tree*>> nodepop;
+	nodepop.resize(SPLIT_NUM+1);
+	for(i = 0; i < para->TreePopNum; i++) {
+		int iter = int(treePop->pop[i]->entropy/NODE_SPLIT);
+		if(SPLIT_NUM <= iter)iter = SPLIT_NUM;
+		if(treePop->pop[i]->entropy != 100000)
+			nodepop[iter-1].push_back(treePop->pop[i]);
 	}
+	for(i = 2; i < nodepop.size(); i++) {
+		if(!nodepop[i].empty()) {
+			outputfile1 << nodepop[i][0]->entropy << " " << 1 - nodepop[i][0]->accuracy << endl;
+			outputfile2 << cnt << endl;
+			nodepop[i][0]->printDot(nodepop[i][0]->root, outputfile2);
+			cnt++;
+		}
+	}
+	nodepop.clear();
 
 	//　過学習防止策におけるテスト事例
 	for(i = 0; i < treePop->bestacc.size(); i++) {
