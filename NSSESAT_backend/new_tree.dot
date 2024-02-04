@@ -2,62 +2,78 @@ digraph G {
 node [shape=box];
 node [style=filled, fillcolor=white];
 
-0 [label="oldpeak"];
+0 [label="caa"];
 
-1 [label="caa"];
-15 [label="thall"];
+1 [label="cp"];
+23 [label="cp"];
 
-0 -> 1 [label="< 1.68"];
-0 -> 15 [label="..."];
+0 -> 1 [label="< 2"];
+0 -> 23 [label="..."];
 
-2 [label="cp"];
-7 [label="cp"];
-16 [label="slp"];
-23 [label="class=0"];
+2 [label="thall"];
+20 [label="thall"];
+24 [label="class=0"];
+25 [label="thall"];
 
-1 -> 2 [label="< 0.8"];
-1 -> 7 [label="..."];
-15 -> 16 [label="< 2.1"];
-15 -> 23 [label="..."];
+1 -> 2 [label="< 2.7"];
+1 -> 20 [label="..."];
+23 -> 24 [label="< 0.9"];
+23 -> 25 [label="..."];
 
-3 [label="thall"];
-6 [label="class=1"];
-8 [label="class=0"];
-9 [label="slp"];
+3 [label="slp"];
+12 [label="oldpeak"];
 17 [label="cp"];
-22 [label="class=1"];
-
-2 -> 3 [label="< 0.6"];
-2 -> 6 [label="..."];
-7 -> 8 [label="< 0.6"];
-7 -> 9 [label="..."];
-16 -> 17 [label="< 1.2"];
-16 -> 22 [label="..."];
-
-4 [label="class=1"];
-5 [label="class=0"];
-10 [label="thall"];
-14 [label="class=1"];
-18 [label="caa"];
 21 [label="class=1"];
+22 [label="class=0"];
+26 [label="slp"];
+29 [label="class=1"];
 
-3 -> 4 [label="< 2.1"];
-3 -> 5 [label="..."];
-9 -> 10 [label="< 1.2"];
-9 -> 14 [label="..."];
-17 -> 18 [label="< 0.6"];
-17 -> 21 [label="..."];
+2 -> 3 [label="< 1.8"];
+2 -> 12 [label="< 2.7"];
+2 -> 17 [label="..."];
+20 -> 21 [label="< 2.1"];
+20 -> 22 [label="..."];
+25 -> 26 [label="< 2.1"];
+25 -> 29 [label="..."];
 
-11 [label="class=0"];
-12 [label="class=1"];
-13 [label="class=0"];
+4 [label="cp"];
+11 [label="class=1"];
+13 [label="class=1"];
+14 [label="cp"];
+18 [label="class=0"];
 19 [label="class=1"];
-20 [label="class=0"];
+27 [label="class=0"];
+28 [label="class=1"];
 
-10 -> 11 [label="< 1.5"];
-10 -> 12 [label="< 2.4"];
-10 -> 13 [label="..."];
-18 -> 19 [label="< 0.8"];
-18 -> 20 [label="..."];
+3 -> 4 [label="< 1.8"];
+3 -> 11 [label="..."];
+12 -> 13 [label="< 3.1"];
+12 -> 14 [label="..."];
+17 -> 18 [label="< 0.9"];
+17 -> 19 [label="..."];
+26 -> 27 [label="< 1.8"];
+26 -> 28 [label="..."];
+
+5 [label="class=0"];
+6 [label="oldpeak"];
+15 [label="class=0"];
+16 [label="class=1"];
+
+4 -> 5 [label="< 0.9"];
+4 -> 6 [label="..."];
+14 -> 15 [label="< 0.9"];
+14 -> 16 [label="..."];
+
+7 [label="caa"];
+10 [label="class=0"];
+
+6 -> 7 [label="< 1.86"];
+6 -> 10 [label="..."];
+
+8 [label="class=1"];
+9 [label="class=0"];
+
+7 -> 8 [label="< 0.8"];
+7 -> 9 [label="..."];
 
 }
