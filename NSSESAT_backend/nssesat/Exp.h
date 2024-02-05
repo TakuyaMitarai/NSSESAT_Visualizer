@@ -14,7 +14,7 @@ public:
 	virtual ~Exp();
 	void initialize(short n);
 	void training();
-	void test();
+	void test(ofstream& outputfile1, ofstream& outputfile2, ofstream& outputfile3, ofstream& outputfile4);
 
 	Data* data;
 	Para* para;

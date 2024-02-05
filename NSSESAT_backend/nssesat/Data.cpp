@@ -56,13 +56,14 @@ Data::Data(char* dataName)
 		testDataNum = 1;
 		trainDataNum = allDataNum - 1;
 	} else {
-		trainDataNum = (allDataNum * 16)/ 25;
-		validationDataNum = (allDataNum * 4)/ 25;
-		testDataNum = allDataNum - trainDataNum - validationDataNum;
+		testDataNum = allDataNum / para->CrossValNum;
+		validationDataNum = (allDataNum - testDataNum) / 5;
+		trainDataNum = allDataNum - testDataNum - validationDataNum;
 	}
 	testData = new float* [testDataNum];
 	validationData = new float* [validationDataNum];
 	trainData = new float* [trainDataNum];
+	alltrainData = new float* [validationDataNum + trainDataNum];
 	crossNum = -1;
 }
 
@@ -77,6 +78,7 @@ Data::~Data()
 	delete [] testData;
 	delete [] minAttValue;
 	delete [] gapAttValue;
+	delete [] alltrainData;
 }
 
 // 訓練データとテストデータの作成
@@ -93,13 +95,17 @@ void Data::makeTestData(short n)
 			testData[i] = allData[i];
 		}
 	} else {
-		for(i = 0, j = 0, k = 0, l = 0; i < allDataNum; i++) {
+		for(i = 0, j = 0, k = 0; i < allDataNum; i++) {
+			if((j < testDataNum) && (i % para->CrossValNum == n))
+				testData[j++] = allData[i];
+			else
+				alltrainData[k++] = allData[i];
+		}
+		for(i = 0, j = 0, k = 0, l = 0; i < validationDataNum + trainDataNum; i++) {
 			if(j < trainDataNum)
-				trainData[j++] = allData[i];
+				trainData[j++] = alltrainData[i];
 			else if(k < validationDataNum)
-				validationData[k++] = allData[i];
-			else 
-				testData[l++] = allData[i];
+				validationData[k++] = alltrainData[i];
 		}
 	}
 	// 各属性値の最低値と最高値との差を求める

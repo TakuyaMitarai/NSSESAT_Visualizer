@@ -91,14 +91,19 @@ async def set_point(point_data: PointData):
     value1, value2 = map(float, imagefilename.split('-'))
     value2 = value2 * 100
     value2 = round(value2, 3)
-
     try:
-        generate_tree_image(imagefilename)  # imagefilenameを渡す
-        with open(f"output.png", "rb") as img_file:  # 出力ファイル名も変更
-            img_base64 = base64.b64encode(img_file.read()).decode("utf-8")
-        return {"message": "Data received", "image": img_base64, "誤り率": value1, "ノード数": value2}
+        generate_tree_image(imagefilename)
     except Exception as e:
         print(f"An error occurred while generating the tree image: {e}")
+
+    try:
+        with open(f"output.png", "rb") as img_file:  # 出力ファイル名も変更
+            img_base64 = base64.b64encode(img_file.read()).decode("utf-8")
+        if not img_base64:
+            return {"message": "Data received", "誤り率": value1, "ノード数": value2}
+        else:
+            return {"message": "Data received", "image": img_base64, "誤り率": value1, "ノード数": value2}
+    except Exception as e:
         return {"message": f"An error occurred: {e}"}
 
 @app.get("/get_data")
@@ -108,6 +113,10 @@ async def get_data():
 @app.get("/get_data2")
 async def get_data2():
     return {"plotdata": read_data('result2.txt')}
+
+@app.get("/get_ave")
+async def get_ave():
+    return {"plotdata": read_data('ave.txt')}
 
 def read_data(filename):
     with open(filename, 'r') as f:

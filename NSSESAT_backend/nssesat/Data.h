@@ -29,4 +29,5 @@ public:
 	float **trainData;	// 訓練データ
 	float **testData;	// テストデータ
 	float **validationData; //バリデーションデータ
+	float **alltrainData;
 };

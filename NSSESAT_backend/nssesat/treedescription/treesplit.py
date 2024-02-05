@@ -1,4 +1,5 @@
 import os
+import pandas as pd
 
 # ディレクトリが存在しなければ作成（親ディレクトリも含めて）
 target_dir = "treedata"  # この部分は実際の相対パスまたは絶対パスに置き換えてください。
@@ -8,20 +9,17 @@ if not os.path.exists(target_dir):
 # ファイルパスを定義
 file_path1 = "../../result.txt"
 file_path2 = "../../result2.txt"
-output_file_path = "../../result3.txt"
-with open(file_path1, "r") as file1:
-        data1 = file1.read()
+# データの読み込み
+df = pd.read_csv(file_path2, sep=" ", header=None, names=['Column1', 'Column2'])
 
-# 2番目のファイルを読み込む
-with open(file_path2, "r") as file2:
-    data2 = file2.read()
+# グループごとの平均と標準偏差を計算
+grouped = df.groupby('Column1')
+mean = grouped.mean()
+std = grouped.std()
 
-# 結合した内容を新しいファイルに書き出す
-with open(output_file_path, "w") as outfile:
-    # 最初のファイルの内容を書き出す
-    outfile.write(data1)
-    # 2番目のファイルの内容を書き出す
-    outfile.write(data2)
+# 結果の保存
+mean.to_csv('../../ave.txt', header=False, sep=' ')
+std.to_csv('../../std.txt', header=False, sep=' ')
 
 
 # treedotfile.txt を読み込む

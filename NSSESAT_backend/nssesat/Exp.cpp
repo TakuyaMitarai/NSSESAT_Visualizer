@@ -7,6 +7,7 @@
 #include <algorithm>
 using namespace std;
 
+extern int cnt;
 // コンストラクタ
 // dataFname : データファイル名
 // pafaFname : パラメータファイル名
@@ -76,7 +77,7 @@ void Exp::training()
 	int i;
 	cout << data->dataname << endl;
 	start = clock();
-
+	para->DepthMax = 10;
 	// 初期集団生成＆評価
 	sprigPop = new SprigPop();
 	TreeNode::sprigPop = sprigPop;
@@ -108,14 +109,9 @@ void Exp::training()
 }
 
 // テストフェーズ
-void Exp::test()
+void Exp::test(ofstream& outputfile1, ofstream& outputfile2, ofstream& outputfile3, ofstream& outputfile4)
 {
-	ofstream outputfile1("../result.txt");
-	ofstream outputfile2("treedotfile.txt");
-	ofstream outputfile3("../result2.txt");
-
 	int i, j, k;
-	int cnt = 0;
 	// 最終世代の訓練事例1
 	// for(i = 0; i < para->TreePopNum / 2; i++) {
 	// 	outputfile1 << treePop->pop[i]->entropy << " " << 1 - treePop->pop[i]->accuracy << endl;
@@ -123,7 +119,6 @@ void Exp::test()
 	// 	treePop->pop[i]->printDot(treePop->pop[i]->root, outputfile2);
 	// 	cnt++;
 	// }
-
 	// 最終世代の訓練事例2
 	vector<vector<Tree*>> nodepop;
 	nodepop.resize(SPLIT_NUM+1);
@@ -136,6 +131,7 @@ void Exp::test()
 	for(i = 2; i < nodepop.size(); i++) {
 		if(!nodepop[i].empty()) {
 			outputfile1 << nodepop[i][0]->entropy << " " << 1 - nodepop[i][0]->accuracy << endl;
+			outputfile4 << nodepop[i][0]->entropy << " " << 1 - nodepop[i][0]->accuracy << endl;
 			outputfile2 << cnt << endl;
 			nodepop[i][0]->printDot(nodepop[i][0]->root, outputfile2);
 			cnt++;
@@ -182,6 +178,7 @@ void Exp::test()
 	for(i = 2; i < nodepop2.size(); i++) {
 		if(!nodepop2[i].empty()) {
 			outputfile3 << nodepop2[i][0]->entropy << " " << 1 - nodepop2[i][0]->accuracy << endl;
+			outputfile4 << nodepop2[i][0]->entropy << " " << 1 - nodepop2[i][0]->accuracy << endl;
 			outputfile2 << cnt << endl;
 			nodepop2[i][0]->printDot(nodepop2[i][0]->root, outputfile2);
 			cnt++;

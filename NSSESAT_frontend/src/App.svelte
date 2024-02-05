@@ -18,10 +18,17 @@
 	let dataFromAPI = {plotdata: []};
 	let chartData = {
 		datasets: [{
+			label: 'ave',
+			data: [],
+			backgroundColor: 'rgba(65, 105, 225, 1)',
+			borderColor: 'rgba(0, 0, 255, 1)',
+			borderWidth: 1
+		},
+		{
 			label: 'データセット1',
 			data: [],
-			backgroundColor: 'rgba(255, 99, 132, 1)',
-			borderColor: 'rgba(255, 99, 132, 1)',
+			backgroundColor: 'rgba(255,192,203, 1)',
+			borderColor: 'rgba(255,192,203, 1)',
 			borderWidth: 1
 		},
 		{
@@ -74,7 +81,8 @@
                 console.log(data.message, data.output);
                 if (data.fetchRequired) {
                     fetchData();
-					fetchData2()
+					fetchData2();
+					fetchave();
                 }
             } else {
                 console.error(`API Error: ${response.statusText}`);
@@ -128,7 +136,7 @@
 			const response = await fetch("http://127.0.0.1:8000/get_data");
 			if (response.ok) {
 				dataFromAPI = await response.json();
-				chartData.datasets[1].data = dataFromAPI.plotdata;
+				chartData.datasets[2].data = dataFromAPI.plotdata;
 				console.log("Fetched Data: ", dataFromAPI);
 			} else {
 				console.error(`API Error: ${response.statusText}`);
@@ -140,6 +148,20 @@
 	async function fetchData2() {
 		try {
 			const response = await fetch("http://127.0.0.1:8000/get_data2");
+			if (response.ok) {
+				dataFromAPI = await response.json();
+				chartData.datasets[1].data = dataFromAPI.plotdata;
+				console.log("Fetched Data: ", dataFromAPI);
+			} else {
+				console.error(`API Error: ${response.statusText}`);
+			}
+		} catch (error) {
+			console.error(`Fetch Error: ${error}`);
+		}
+	}
+	async function fetchave() {
+		try {
+			const response = await fetch("http://127.0.0.1:8000/get_ave");
 			if (response.ok) {
 				dataFromAPI = await response.json();
 				chartData.datasets[0].data = dataFromAPI.plotdata;
@@ -154,6 +176,7 @@
 
 	onMount(fetchData);
 	onMount(fetchData2);
+	onMount(fetchave);
 </script>
 
 <style>

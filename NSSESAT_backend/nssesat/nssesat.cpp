@@ -4,6 +4,7 @@
 #include <vector>
 #include "Exp.h"
 using namespace std;
+int cnt;
 
 int main() {
     Exp* exp;
@@ -52,12 +53,17 @@ int main() {
     for(i = 0; i < datanum; i++) {
         cout << "NO\tCROSS\t世代\t正解率\t木の深さ\tノード数\t適応度\t訓練時間\t訓練正解率\t訓練適応度\n";
         k = 0;
+        cnt = 0;
         exp = new Exp(dataFname[i], "parameters.txt");
-        for(j = 0; j < 1/*exp->para->CrossValNum*/; j++) {
+        ofstream outputfile1("../result.txt");
+        ofstream outputfile2("treedotfile.txt");
+        ofstream outputfile3("../result2.txt");
+        ofstream outputfile4("../result3.txt");
+        for(j = 0; j < exp->para->CrossValNum; j++) {
             exp->initialize(j);
             exp->training();
             cout << "test--------------------" << endl;
-            exp->test();
+            exp->test(outputfile1, outputfile2, outputfile3, outputfile4);
         }
         delete exp;
     }
