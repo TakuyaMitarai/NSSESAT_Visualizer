@@ -84,7 +84,7 @@ void Exp::training()
 	treePop = new TreePop();
 	sprigPop->sort(0, para->SprigPopNum - 1);
 	//log();
-	para->DepthMax = 200;
+	para->DepthMax = 20;
 	while(treePop->genNum <= para->GenerationMax) {
 		cout << "第" << treePop->genNum << "世代" << endl;
 		newGeneration(); // 新しい世代を生成
@@ -137,7 +137,6 @@ void Exp::test(ofstream& outputfile1, ofstream& outputfile2, ofstream& outputfil
 			cnt++;
 		}
 	}
-	nodepop.clear();
 
 	//　過学習防止策におけるテスト事例1
 	// for(i = 0; i < treePop->bestacc.size(); i++) {
@@ -159,8 +158,8 @@ void Exp::test(ofstream& outputfile1, ofstream& outputfile2, ofstream& outputfil
 	for(i = 0; i < treePop->bestacc.size(); i++) {
 		for(j = 0; j < treePop->bestacc[i].size(); j++) {
 			treePop->bestacc[i][j]->evalInit();
-			for(short k = 0; k < data->testDataNum; k++)
-				treePop->bestacc[i][j]->traverse(data->testData[k]);
+			for(short k = 0; k < data->validationDataNum; k++)
+				treePop->bestacc[i][j]->traverse(data->validationData[k]);
 			treePop->bestacc[i][j]->calcFit();
 			int iter = int(treePop->bestacc[i][j]->entropy/NODE_SPLIT);
 			if(SPLIT_NUM <= iter)iter = SPLIT_NUM;
@@ -175,6 +174,28 @@ void Exp::test(ofstream& outputfile1, ofstream& outputfile2, ofstream& outputfil
 			});
 		}
     }
+	for (size_t i = 2; i < nodepop2.size(); i++) {
+		if(!nodepop2[i].empty()) {
+			int cn = -1;
+			do{
+				if(nodepop2[i].size() - 1 < cn) break;
+				cn++;
+				//if(!nodepop[i].empty()) break;
+			}while(nodepop2[i][cn]->accuracy > nodepop[i][0]->accuracy);
+			if(cn > 0) {
+				nodepop2[i][0] = nodepop2[i][cn-1];
+			}
+		} 
+    }
+	for (size_t i = 2; i < nodepop2.size(); i++) {
+		if(!nodepop2[i].empty()) {
+			nodepop2[i][0]->evalInit();
+			for(short k = 0; k < data->testDataNum; k++)
+				nodepop2[i][0]->traverse(data->testData[k]);
+			nodepop2[i][0]->calcFit();
+			
+		}
+    }
 	for(i = 2; i < nodepop2.size(); i++) {
 		if(!nodepop2[i].empty()) {
 			outputfile3 << nodepop2[i][0]->entropy << " " << 1 - nodepop2[i][0]->accuracy << endl;
@@ -185,6 +206,7 @@ void Exp::test(ofstream& outputfile1, ofstream& outputfile2, ofstream& outputfil
 		}
 	}
 	nodepop2.clear();
+	nodepop.clear();
 
 	// 最終世代のテスト事例
 	// for(i = 0; i < para->TreePopNum / 2; i++) {

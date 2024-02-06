@@ -95,7 +95,7 @@ async def set_point(point_data: PointData):
         generate_tree_image(imagefilename)
     except Exception as e:
         print(f"An error occurred while generating the tree image: {e}")
-
+        
     try:
         with open(f"output.png", "rb") as img_file:  # 出力ファイル名も変更
             img_base64 = base64.b64encode(img_file.read()).decode("utf-8")

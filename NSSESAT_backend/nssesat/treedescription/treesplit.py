@@ -21,7 +21,6 @@ std = grouped.std()
 mean.to_csv('../../ave.txt', header=False, sep=' ')
 std.to_csv('../../std.txt', header=False, sep=' ')
 
-
 # treedotfile.txt を読み込む
 with open("../treedotfile.txt", "r") as f:
     treedotfile_lines = f.readlines()

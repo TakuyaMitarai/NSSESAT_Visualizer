@@ -76,7 +76,6 @@ void Tree::newGeneration(Tree* p1, Tree* p2, int an, int bn)
 	root->copyTree(p1->root);
 	a = getNode(an);
 	b = p2->getNode(bn);
-
 	if(a->parent) {
 		parent = a->parent;
 		for(i = 0; i < para->ChildNodeNumMax; i++) {

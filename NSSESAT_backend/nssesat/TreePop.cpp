@@ -173,7 +173,7 @@ void TreePop::newGeneration()
 						tmp2 = a;
 					}
 				}
-			} while (pop[tmp2] == nodepop[k][i]);
+			} while (tmp1 == tmp2 || pop[tmp2] == nodepop[k][i]);
 			index1 = randomInt(pop[tmp1]->nodeNum - 1) + 1;
 			index2 = randomInt(pop[tmp2]->nodeNum - 1) + 1;
 			nodepop[k][i]->newGeneration(pop[tmp1], pop[tmp2], index1, index2);
@@ -181,10 +181,11 @@ void TreePop::newGeneration()
 			for(j = 0; j < data->trainDataNum; j++)
 				nodepop[k][i]->traverse(data->trainData[j]);
 			nodepop[k][i]->modify();
-			nodepop[k][i]->evalInit();
-			for(j = 0; j < data->validationDataNum; j++)
-				nodepop[k][i]->traverse(data->validationData[j]);
 			nodepop[k][i]->calcFit();
+			// nodepop[k][i]->evalInit();
+			// for(j = 0; j < data->validationDataNum; j++)
+			// 	nodepop[k][i]->traverse(data->validationData[j]);
+			// nodepop[k][i]->calcFit();
 			if(int(nodepop[k][i]->entropy) < SPLIT_NUM  && int(nodepop[k][i]->entropy) > 0) {
 				if(bestacc[int(nodepop[k][i]->entropy)].empty()) {
 					bestacc[int(nodepop[k][i]->entropy)].push_back(new Tree(nodepop[k][i]));
@@ -192,10 +193,10 @@ void TreePop::newGeneration()
 					bestacc[int(nodepop[k][i]->entropy)].push_back(new Tree(nodepop[k][i]));
 				}
 			}
-			nodepop[k][i]->evalInit();
-			for(j = 0; j < data->trainDataNum; j++)
-				nodepop[k][i]->traverse(data->trainData[j]);
-			nodepop[k][i]->calcFit();
+			// nodepop[k][i]->evalInit();
+			// for(j = 0; j < data->trainDataNum; j++)
+			// 	nodepop[k][i]->traverse(data->trainData[j]);
+			// nodepop[k][i]->calcFit();
 		}
 	}
 	nodepop.clear();

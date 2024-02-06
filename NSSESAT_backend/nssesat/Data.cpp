@@ -64,7 +64,6 @@ Data::Data(char* dataName)
 	validationData = new float* [validationDataNum];
 	trainData = new float* [trainDataNum];
 	alltrainData = new float* [validationDataNum + trainDataNum];
-	crossNum = -1;
 }
 
 // デストラクタ
