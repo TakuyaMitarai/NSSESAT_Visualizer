@@ -1,9 +1,0 @@
-TreeLog			0
-TreeLog2		1
-CrossValNum		10
-ProbMutate		0.15
-TreePopNum		1200
-SprigPopNum		500
-ChildNodeNumMax	6
-GenerationMax	20000
-DepthMax	    10
