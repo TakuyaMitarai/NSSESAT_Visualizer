@@ -1,0 +1,111 @@
+digraph G {
+node [shape=box];
+node [style=filled, fillcolor=white];
+
+0 [label="cp"];
+
+1 [label="caa"];
+18 [label="caa"];
+
+0 -> 1 [label="< 0.9"];
+0 -> 18 [label="..."];
+
+2 [label="slp"];
+17 [label="class=0"];
+19 [label="exng"];
+35 [label="oldpeak"];
+
+1 -> 2 [label="< 0.4"];
+1 -> 17 [label="..."];
+18 -> 19 [label="< 0.4"];
+18 -> 35 [label="..."];
+
+3 [label="exng"];
+10 [label="thall"];
+20 [label="oldpeak"];
+30 [label="thall"];
+36 [label="thall"];
+45 [label="class=0"];
+
+2 -> 3 [label="< 1.4"];
+2 -> 10 [label="..."];
+19 -> 20 [label="< 0.6"];
+19 -> 30 [label="..."];
+35 -> 36 [label="< 1.86"];
+35 -> 45 [label="..."];
+
+4 [label="thall"];
+9 [label="class=0"];
+11 [label="class=1"];
+12 [label="exng"];
+21 [label="thall"];
+29 [label="class=0"];
+31 [label="restecg"];
+34 [label="class=0"];
+37 [label="thall"];
+40 [label="restecg"];
+
+3 -> 4 [label="< 0.6"];
+3 -> 9 [label="..."];
+10 -> 11 [label="< 2.7"];
+10 -> 12 [label="..."];
+20 -> 21 [label="< 1.86"];
+20 -> 29 [label="..."];
+30 -> 31 [label="< 2.7"];
+30 -> 34 [label="..."];
+36 -> 37 [label="< 2.7"];
+36 -> 40 [label="..."];
+
+5 [label="class=1"];
+6 [label="restecg"];
+13 [label="restecg"];
+16 [label="class=0"];
+22 [label="class=0"];
+23 [label="class=1"];
+24 [label="restecg"];
+32 [label="class=0"];
+33 [label="class=1"];
+38 [label="class=0"];
+39 [label="class=1"];
+41 [label="class=0"];
+42 [label="thalachh"];
+
+4 -> 5 [label="< 2.7"];
+4 -> 6 [label="..."];
+12 -> 13 [label="< 0.6"];
+12 -> 16 [label="..."];
+21 -> 22 [label="< 1.8"];
+21 -> 23 [label="< 2.7"];
+21 -> 24 [label="..."];
+31 -> 32 [label="< 0.6"];
+31 -> 33 [label="..."];
+37 -> 38 [label="< 1.8"];
+37 -> 39 [label="..."];
+40 -> 41 [label="< 0.6"];
+40 -> 42 [label="..."];
+
+7 [label="class=0"];
+8 [label="class=1"];
+14 [label="class=0"];
+15 [label="class=1"];
+25 [label="class=0"];
+26 [label="thalachh"];
+43 [label="class=0"];
+44 [label="class=1"];
+
+6 -> 7 [label="< 0.6"];
+6 -> 8 [label="..."];
+13 -> 14 [label="< 0.6"];
+13 -> 15 [label="..."];
+24 -> 25 [label="< 0.6"];
+24 -> 26 [label="..."];
+42 -> 43 [label="< 133.6"];
+42 -> 44 [label="..."];
+
+27 [label="class=0"];
+28 [label="class=1"];
+
+26 -> 27 [label="< 133.6"];
+26 -> 28 [label="..."];
+
+}
